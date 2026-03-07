@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="accordion.css">
+</head>
+<body>
+  <div class="demo-container">
+    <h1>Accordion</h1>
+    <p class="body1">From MonoSchemes Design System</p>
+    
+    <div class="accordion-group">
+      <div class="accordion" data-state="collapsed">
+        <div class="accordion-header">
+          <span class="subtitle1">Sec 01</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="accordion" data-state="expanded">
+        <div class="accordion-header">
+          <span class="subtitle1">Sec 02</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="accordion-panel">
+          <p class="body1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      <div class="accordion" data-state="collapsed">
+        <div class="accordion-header">
+          <span class="subtitle1">Sec 03</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="accordion.js"></script>
+</body>
+</html>
