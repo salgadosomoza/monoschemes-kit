@@ -1,0 +1,74 @@
+/* Avatar — MonoSchemes Design System
+ * Figma: XZ8yMM8VJihEwmyFaW6sCB · node 2:35
+ */
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;               /* layout_LGGGZD: 64×64 */
+  height: 64px;
+  background: #D9D9D9;       /* fill_J6SM7D */
+  color: #000000;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ─── Style variants ──────────────────────────────── */
+
+.avatar[data-style="round"] {
+  border-radius: 100px;      /* Type=*,Style=Round */
+}
+
+.avatar[data-style="rounded"] {
+  border-radius: 8px;        /* Type=*,Style=Rounded */
+}
+
+.avatar[data-style="square"] {
+  border-radius: 0;          /* Type=*,Style=Square */
+}
+
+/* ─── Initials ────────────────────────────────────── */
+
+/* WM text: cap-height ≈ 13.96px → font-size ≈ 20px (Inter cap-height ratio ~0.73) */
+.avatar-initials {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000000;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Demo layout ─────────────────────────────────── */
+
+.demo-container {
+  padding: var(--spacing-md);
+  max-width: 700px;
+}
+
+.demo-table {
+  border-collapse: separate;
+  border-spacing: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.demo-table th,
+.demo-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.demo-table td:first-child {
+  text-align: left;
+  padding-right: var(--spacing-xs);
+}
+
+.demo-table th {
+  font-family: var(--font-family);
+  font-size: var(--font-body1-size);
+  font-weight: var(--font-body1-weight);
+  color: var(--color-text-secondary);
+  padding-bottom: var(--spacing-xs);
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+  <!-- Page header (outside grid) -->
+  <div class="page-header">
+    <h1 class="text-h1">Grid</h1>
+    <p class="body1">Column system · MonoSchemes Design System</p>
+  </div>
+
+  <!-- ─── Responsive grid (adapts to viewport) ──────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Responsive — 4 cols → 8 cols → 16 cols</p>
+      <p class="demo-meta body1">Resize the browser to see breakpoints switch</p>
+    </div>
+    <div class="grid-container">
+      <div class="grid-col"><div class="col-inner">1</div></div>
+      <div class="grid-col"><div class="col-inner">2</div></div>
+      <div class="grid-col"><div class="col-inner">3</div></div>
+      <div class="grid-col"><div class="col-inner">4</div></div>
+      <div class="grid-col grid-col--hide-small"><div class="col-inner">5</div></div>
+      <div class="grid-col grid-col--hide-small"><div class="col-inner">6</div></div>
+      <div class="grid-col grid-col--hide-small"><div class="col-inner">7</div></div>
+      <div class="grid-col grid-col--hide-small"><div class="col-inner">8</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">9</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">10</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">11</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">12</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">13</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">14</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">15</div></div>
+      <div class="grid-col grid-col--hide-medium"><div class="col-inner">16</div></div>
+    </div>
+  </section>
+
+  <!-- ─── Small — 4 columns (360px) ────────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Small · 360px · 4 columns · gap 8px · no padding</p>
+    </div>
+    <div class="demo-viewport demo-viewport--small">
+      <div class="grid-container" data-columns="4">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+        <div class="grid-col"><div class="col-inner">3</div></div>
+        <div class="grid-col"><div class="col-inner">4</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Small — 2 columns ─────────────────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Small · 360px · 2 columns</p>
+    </div>
+    <div class="demo-viewport demo-viewport--small">
+      <div class="grid-container" data-columns="2">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Medium — 8 columns (768px) ───────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Medium · 768px · 8 columns · gap 8px · padding 0 24px</p>
+    </div>
+    <div class="demo-viewport demo-viewport--medium">
+      <div class="grid-container" data-columns="8">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+        <div class="grid-col"><div class="col-inner">3</div></div>
+        <div class="grid-col"><div class="col-inner">4</div></div>
+        <div class="grid-col"><div class="col-inner">5</div></div>
+        <div class="grid-col"><div class="col-inner">6</div></div>
+        <div class="grid-col"><div class="col-inner">7</div></div>
+        <div class="grid-col"><div class="col-inner">8</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Medium — 4 columns ────────────────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Medium · 768px · 4 columns</p>
+    </div>
+    <div class="demo-viewport demo-viewport--medium">
+      <div class="grid-container" data-columns="4">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+        <div class="grid-col"><div class="col-inner">3</div></div>
+        <div class="grid-col"><div class="col-inner">4</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Large — 16 columns (1440px) ──────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Large · 1440px · 16 columns · gap 8px · padding 0 16px</p>
+    </div>
+    <div class="demo-viewport demo-viewport--large">
+      <div class="grid-container" data-columns="16">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+        <div class="grid-col"><div class="col-inner">3</div></div>
+        <div class="grid-col"><div class="col-inner">4</div></div>
+        <div class="grid-col"><div class="col-inner">5</div></div>
+        <div class="grid-col"><div class="col-inner">6</div></div>
+        <div class="grid-col"><div class="col-inner">7</div></div>
+        <div class="grid-col"><div class="col-inner">8</div></div>
+        <div class="grid-col"><div class="col-inner">9</div></div>
+        <div class="grid-col"><div class="col-inner">10</div></div>
+        <div class="grid-col"><div class="col-inner">11</div></div>
+        <div class="grid-col"><div class="col-inner">12</div></div>
+        <div class="grid-col"><div class="col-inner">13</div></div>
+        <div class="grid-col"><div class="col-inner">14</div></div>
+        <div class="grid-col"><div class="col-inner">15</div></div>
+        <div class="grid-col"><div class="col-inner">16</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Large — 8 columns ─────────────────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Large · 1440px · 8 columns</p>
+    </div>
+    <div class="demo-viewport demo-viewport--large">
+      <div class="grid-container" data-columns="8">
+        <div class="grid-col"><div class="col-inner">1</div></div>
+        <div class="grid-col"><div class="col-inner">2</div></div>
+        <div class="grid-col"><div class="col-inner">3</div></div>
+        <div class="grid-col"><div class="col-inner">4</div></div>
+        <div class="grid-col"><div class="col-inner">5</div></div>
+        <div class="grid-col"><div class="col-inner">6</div></div>
+        <div class="grid-col"><div class="col-inner">7</div></div>
+        <div class="grid-col"><div class="col-inner">8</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Max — 16 columns (1920px) ────────────────── -->
+  <section class="demo-section">
+    <div class="demo-section-header">
+      <p class="demo-label">Max · 1920px · 16 columns · outer padding 0 168px · inner padding 0 24px</p>
+    </div>
+    <div class="demo-viewport demo-viewport--max">
+      <div class="grid-wrapper--max">
+        <div class="grid-container" data-columns="16">
+          <div class="grid-col"><div class="col-inner">1</div></div>
+          <div class="grid-col"><div class="col-inner">2</div></div>
+          <div class="grid-col"><div class="col-inner">3</div></div>
+          <div class="grid-col"><div class="col-inner">4</div></div>
+          <div class="grid-col"><div class="col-inner">5</div></div>
+          <div class="grid-col"><div class="col-inner">6</div></div>
+          <div class="grid-col"><div class="col-inner">7</div></div>
+          <div class="grid-col"><div class="col-inner">8</div></div>
+          <div class="grid-col"><div class="col-inner">9</div></div>
+          <div class="grid-col"><div class="col-inner">10</div></div>
+          <div class="grid-col"><div class="col-inner">11</div></div>
+          <div class="grid-col"><div class="col-inner">12</div></div>
+          <div class="grid-col"><div class="col-inner">13</div></div>
+          <div class="grid-col"><div class="col-inner">14</div></div>
+          <div class="grid-col"><div class="col-inner">15</div></div>
+          <div class="grid-col"><div class="col-inner">16</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Full — 16 columns (sin max-width) ─────────── -->
+  <section class="demo-section demo-section--full">
+    <div class="demo-section-header">
+      <p class="demo-label">Full · sin max-width · 16 columns</p>
+    </div>
+    <div class="grid-container--full">
+      <div class="grid-col--full"><div class="col-inner col-inner--full">1</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">2</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">3</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">4</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">5</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">6</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">7</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">8</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">9</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">10</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">11</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">12</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">13</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">14</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">15</div></div>
+      <div class="grid-col--full"><div class="col-inner col-inner--full">16</div></div>
+    </div>
+  </section>
+
+</body>
+</html>

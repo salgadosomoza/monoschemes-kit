@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Header - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <!-- Imported component styles -->
+  <link rel="stylesheet" href="logo.css">
+  <link rel="stylesheet" href="nav-item.css">
+  <link rel="stylesheet" href="app-header.css">
+</head>
+<body>
+
+  <!-- ─── App Header component ──────────────────────── -->
+  <header class="app-header">
+
+    <!-- Left: Logo + Site title + Tagline -->
+    <div class="app-header__left">
+
+      <!-- Logo Type=Image (layout_IOK6RS: 40×40, fill #D9D9D9) -->
+      <div class="logo app-header__logo" data-type="image" aria-label="Logo">
+        <div class="logo-image"></div>
+      </div>
+
+      <!-- Site title (body 1, #000) -->
+      <span class="app-header__site-title">Site title</span>
+
+      <!-- Tagline (body 1, #000) — hidden on mobile -->
+      <span class="app-header__tagline">Tagline</span>
+
+    </div>
+
+    <!-- Right: Nav + Actions -->
+    <div class="app-header__right">
+
+      <!-- Nav (layout_DNRKXD: row, gap 24px) — hidden on mobile -->
+      <nav class="app-header__nav" aria-label="Main navigation">
+        <a href="#" class="nav-item">Works</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Other projects</a>
+      </nav>
+
+      <!-- Actions: menu icon (layout_TY6UL2 + layout_SR27DN: 24×24) -->
+      <button class="app-header__menu-btn" aria-label="Open menu" aria-expanded="false">
+        <!-- Icon/menu: 3 lines at x:3 y:6, w:18 h:12 inside 24×24 -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 6H21M3 12H21M3 18H21" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ─── Demo page content ─────────────────────────── -->
+  <div class="demo-page">
+    <div class="demo-info">
+      <h2 class="demo-info__title">App Header</h2>
+      <p class="demo-info__body">From MonoSchemes Design System · Figma node 2:45</p>
+    </div>
+
+    <table class="demo-table">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Max-width</td><td>1440px</td></tr>
+        <tr><td>Padding</td><td>16px</td></tr>
+        <tr><td>Background</td><td>#FFFFFF</td></tr>
+        <tr><td>Border</td><td>1px solid #000 (bottom)</td></tr>
+        <tr><td>Nav gap</td><td>24px</td></tr>
+        <tr><td>Logo size</td><td>40×40px</td></tr>
+        <tr><td>Menu icon</td><td>24×24px</td></tr>
+      </tbody>
+    </table>
+
+    <div class="demo-breakpoints">
+      <p class="demo-breakpoints__label">Responsive behavior</p>
+      <ul class="demo-breakpoints__list">
+        <li><strong>Mobile (&lt;768px):</strong> Logo + Menu icon only</li>
+        <li><strong>Tablet (768px):</strong> Logo + Site title + Nav + Menu icon · Tagline hidden</li>
+        <li><strong>Desktop (1440px):</strong> All elements visible</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

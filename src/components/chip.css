@@ -1,0 +1,92 @@
+/* Chip — MonoSchemes Design System
+ * Figma: XZ8yMM8VJihEwmyFaW6sCB · node 10:468
+ */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);       /* 8px — Figma gap: 8px */
+  padding: var(--spacing-xs);   /* 8px — Figma padding: 8px */
+
+  background: #ffffff;          /* fill_UXCKPE */
+  border: 1px solid #000000;   /* stroke_2N8SIQ */
+  border-radius: 5px;           /* borderRadius of component set */
+
+  cursor: default;
+  user-select: none;
+}
+
+/* Label — body 1: Inter 400, 16px */
+.chip-label {
+  font-family: var(--font-family);
+  font-size: var(--font-body1-size);       /* 16px */
+  font-weight: var(--font-body1-weight);   /* 400 */
+  line-height: var(--font-body1-line-height);
+  color: #000000;                          /* fill_ED7X61 */
+}
+
+/* Close button — 24×24px */
+.chip-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;                  /* layout_GXV1JE: 24×24 */
+  height: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 2px;
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+}
+
+.chip-close:hover {
+  opacity: 0.6;
+}
+
+/* Drag handle — 16×16px (layout_5A5LWM) */
+.chip-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;                  /* layout_5A5LWM: 16×16 */
+  height: 16px;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.chip-drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Drag state feedback */
+.chip[draggable="true"]:is([data-dragging]) {
+  opacity: 0.4;
+}
+
+/* ─── Demo layout ─────────────────────────────────── */
+
+.demo-container {
+  padding: var(--spacing-md);
+  max-width: 600px;
+}
+
+.demo-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.demo-label {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}

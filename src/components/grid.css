@@ -1,0 +1,239 @@
+/* Grid — MonoSchemes Design System
+ * Figma: XZ8yMM8VJihEwmyFaW6sCB · node 106:1130
+ *
+ * Breakpoints (from Figma):
+ *   Small  →  max-width: 360px   · gap: 8px · padding: 0
+ *   Medium →  max-width: 768px   · gap: 8px · padding: 0 24px
+ *   Large  →  max-width: 1440px  · gap: 8px · padding: 0 16px
+ *   Max    →  max-width: 1920px  · gap: 8px · outer: 0 168px · inner: 0 24px
+ *   Full   →  no max-width       · gap: 8px · 16 cols · bg #CFCFCF
+ */
+
+/* ─── CSS variables ───────────────────────────────── */
+
+:root {
+  --grid-gap: 8px;          /* Figma gap: 8px across all breakpoints */
+  --bp-medium: 768px;
+  --bp-large: 1440px;
+  --bp-max: 1920px;
+
+  /* Column counts per breakpoint */
+  --grid-cols-small: 4;
+  --grid-cols-medium: 8;
+  --grid-cols-large: 16;
+}
+
+/* ═══════════════════════════════════════════════════
+   GRID SYSTEM
+   ═══════════════════════════════════════════════════ */
+
+/* ─── .grid-container ────────────────────────────── */
+/* Base (Small): 360px, no padding, 4 cols          */
+
+.grid-container {
+  display: grid;
+  gap: var(--grid-gap);
+  width: 100%;
+  max-width: 360px;                   /* layout_649UQT: width 360 */
+  padding: 0;                         /* Small: no lateral padding */
+  margin: 0 auto;
+  box-sizing: border-box;
+  grid-template-columns: repeat(var(--grid-cols-small), 1fr);
+}
+
+/* Medium: 768px, padding 0 24px, 8 cols */
+@media (min-width: 768px) {
+  .grid-container {
+    max-width: 768px;                 /* layout_8Y33K5: width 768 */
+    padding: 0 24px;                  /* layout_FRD4SE: padding 0 24px */
+    grid-template-columns: repeat(var(--grid-cols-medium), 1fr);
+  }
+}
+
+/* Large: 1440px, padding 0 16px, 16 cols */
+@media (min-width: 1440px) {
+  .grid-container {
+    max-width: 1440px;                /* layout_5FRKYL: width 1440 */
+    padding: 0 16px;                  /* layout_65HOX0: padding 0 16px */
+    grid-template-columns: repeat(var(--grid-cols-large), 1fr);
+  }
+}
+
+/* Max: 1920px, outer 168px + inner 24px = 192px effective */
+@media (min-width: 1920px) {
+  .grid-container {
+    max-width: 1920px;                /* layout_3HSEBF: width 1920 */
+    padding: 0 192px;                 /* outer 168px + inner 24px */
+    grid-template-columns: repeat(var(--grid-cols-large), 1fr);
+  }
+}
+
+/* ─── data-columns override ───────────────────────── */
+/* Explicit column count, applies at any viewport     */
+
+.grid-container[data-columns="1"]  { grid-template-columns: repeat(1, 1fr); }
+.grid-container[data-columns="2"]  { grid-template-columns: repeat(2, 1fr); }
+.grid-container[data-columns="4"]  { grid-template-columns: repeat(4, 1fr); }
+.grid-container[data-columns="8"]  { grid-template-columns: repeat(8, 1fr); }
+.grid-container[data-columns="16"] { grid-template-columns: repeat(16, 1fr); }
+
+/* ─── .grid-col ───────────────────────────────────── */
+/* fill_ASJ1ZV: #F6F7F9 = --color-bg-surface          */
+
+.grid-col {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Column spanning helpers */
+.grid-col--span-2  { grid-column: span 2; }
+.grid-col--span-4  { grid-column: span 4; }
+.grid-col--span-8  { grid-column: span 8; }
+.grid-col--span-16 { grid-column: span 16; }
+
+/* ─── Max variant: two-level wrapper ─────────────── */
+/* layout_3HSEBF (outer 168px) + layout_CWBIWP (24px) */
+
+.grid-wrapper--max {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 168px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.grid-wrapper--max .grid-container {
+  max-width: none;
+  padding: 0 24px;
+}
+
+/* ─── Full variant ────────────────────────────────── */
+/* layout_EEY77O: no max-width, fill_4EVRMA: #CFCFCF  */
+
+.grid-container--full {
+  display: grid;
+  gap: var(--grid-gap);
+  width: 100%;
+  grid-template-columns: repeat(16, 1fr);
+  background: #CFCFCF;               /* fill_4EVRMA */
+  box-sizing: border-box;
+}
+
+.grid-col--full {
+  /* layout_EW746J: padding 0 16px on each col */
+  padding: 0 16px;
+  min-width: 0;
+  background: #CFCFCF;
+}
+
+/* ═══════════════════════════════════════════════════
+   DEMO STYLES
+   ═══════════════════════════════════════════════════ */
+
+body {
+  background: var(--color-bg-page);
+  overflow-x: hidden;
+}
+
+/* Visualization fill for columns */
+.col-inner {
+  background: var(--color-bg-surface);  /* #F6F7F9 */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.col-inner--full {
+  background: var(--color-bg-surface);
+}
+
+/* Page header */
+.page-header {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border-default);
+}
+
+.page-header h1 {
+  font-family: var(--font-family);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.232em;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.page-header .body1 {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-xs) 0 0;
+}
+
+/* Demo sections */
+.demo-section {
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-bg-hover);
+}
+
+.demo-section--full {
+  border-bottom: none;
+}
+
+.demo-section-header {
+  padding: 0 var(--spacing-md) var(--spacing-sm);
+}
+
+.demo-label {
+  font-family: var(--font-family);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 4px;
+}
+
+.demo-meta {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Fixed-width viewports for static breakpoint demos */
+.demo-viewport {
+  overflow-x: auto;
+  background: var(--color-bg-surface);
+  border: 1px dashed var(--color-border-default);
+}
+
+.demo-viewport--small  { width: 100%; max-width: 360px; margin: 0 auto; }
+.demo-viewport--medium { width: 100%; max-width: 768px; margin: 0 auto; }
+.demo-viewport--large  { width: 100%; max-width: 1440px; overflow-x: auto; }
+.demo-viewport--max    { width: 100%; overflow-x: auto; }
+
+/* Override max-widths inside demo viewports (the viewport itself provides constraint) */
+.demo-viewport .grid-container {
+  max-width: none;
+  margin: 0;
+}
+
+.demo-viewport--small  .grid-container { padding: 0; }
+.demo-viewport--medium .grid-container { padding: 0 24px; }
+.demo-viewport--large  .grid-container { padding: 0 16px; }
+
+/* Responsive section: hide cols beyond breakpoint capacity */
+@media (max-width: 767px) {
+  .grid-col--hide-small { display: none; }
+}
+@media (max-width: 1439px) {
+  .grid-col--hide-medium { display: none; }
+}
