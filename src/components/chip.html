@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chip - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="chip.css">
+</head>
+<body>
+  <div class="demo-container">
+    <h1>Chip</h1>
+    <p class="body1">From MonoSchemes Design System</p>
+
+    <div class="demo-row">
+      <div class="demo-label body1">Default</div>
+      <div class="chip-group">
+        <div class="chip" data-type="default">
+          <span class="chip-label">Chip name</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chip" data-type="default">
+          <span class="chip-label">Design</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chip" data-type="default">
+          <span class="chip-label">System</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-row">
+      <div class="demo-label body1">Drag</div>
+      <div class="chip-group" id="drag-group">
+        <div class="chip" data-type="drag" draggable="true">
+          <span class="chip-drag-handle" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="12" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="12" r="1.5" fill="#000000"/>
+            </svg>
+          </span>
+          <span class="chip-label">Chip name</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chip" data-type="drag" draggable="true">
+          <span class="chip-drag-handle" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="12" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="12" r="1.5" fill="#000000"/>
+            </svg>
+          </span>
+          <span class="chip-label">Design</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="chip" data-type="drag" draggable="true">
+          <span class="chip-drag-handle" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="5" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="5" cy="12" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="4" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="8" r="1.5" fill="#000000"/>
+              <circle cx="11" cy="12" r="1.5" fill="#000000"/>
+            </svg>
+          </span>
+          <span class="chip-label">System</span>
+          <button class="chip-close" aria-label="Remove chip">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="chip.js"></script>
+</body>
+</html>

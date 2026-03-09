@@ -1,0 +1,52 @@
+/* Nav/Item — MonoSchemes Design System
+ * Figma: XZ8yMM8VJihEwmyFaW6sCB · node 673:2102
+ */
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);          /* 8px */
+  padding: 8px var(--spacing-sm);  /* 8px 16px — from Figma x:16, y:16 position */
+
+  font-family: var(--font-family);
+  font-size: 12px;                 /* Button/Left: 12px */
+  font-weight: 700;                /* Button/Left: bold */
+  line-height: 1.3333333333333333em; /* Button/Left */
+  text-align: left;
+  text-decoration: none;
+  color: #000000;                  /* fill_QE1A0R */
+
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+/* Hover state — stroke_LKIPYT: bottom 1px solid #000 */
+.nav-item:hover,
+.nav-item[data-status="hover"] {
+  border-bottom-color: #000000;
+}
+
+/* ─── Demo layout ─────────────────────────────────── */
+
+.demo-container {
+  padding: var(--spacing-md);
+  max-width: 600px;
+}
+
+.demo-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.demo-label {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.nav-demo {
+  display: flex;
+  gap: var(--spacing-xs);
+}
