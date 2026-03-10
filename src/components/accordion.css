@@ -1,3 +1,24 @@
+.component-nav {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-default, #40444A);
+  background: var(--background-page, #FFFFFF);
+  margin-bottom: 24px;
+}
+
+.component-nav a {
+  color: var(--text-primary, #2B2F36);
+  text-decoration: none;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.component-nav a:hover {
+  color: var(--text-secondary, #40444A);
+  text-decoration: underline;
+}
+
 .demo-container {
   max-width: 592px;
   margin: 0 auto;
