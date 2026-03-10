@@ -1,0 +1,144 @@
+/* ============================================
+   Link Component
+   MonoSchemes Design System
+   Figma: Component Set '86:502' (Link)
+   ============================================ */
+
+/* --- Navigation --- */
+.component-nav {
+  padding: 16px;
+  border-bottom: 1px solid #000;
+  background: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.component-nav a {
+  color: var(--color-text-primary, #2B2F36);
+  text-decoration: none;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.component-nav a:hover {
+  color: var(--color-text-secondary, #40444A);
+  text-decoration: underline;
+}
+
+/* --- Demo Container --- */
+.demo-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--spacing-lg, 50px) var(--spacing-sm, 16px);
+}
+
+.demo-section {
+  margin-top: var(--spacing-lg, 50px);
+}
+
+.demo-section:first-of-type {
+  margin-top: var(--spacing-md, 24px);
+}
+
+.demo-section h2 {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary, #2B2F36);
+  margin: 0 0 var(--spacing-md, 24px) 0;
+  padding-bottom: var(--spacing-xs, 8px);
+  border-bottom: 1px solid #000;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md, 24px);
+  align-items: baseline;
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+.demo-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-label {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary, #40444A);
+  margin-bottom: 4px;
+}
+
+/* ============================================
+   Link Base
+   Figma: fill_7NI76B = #000, no text-decoration default,
+   hover = underline
+   ============================================ */
+.link {
+  display: inline-flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: #000000;
+}
+
+.link:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* ── Sizes ────────────────────────────────── */
+/* link/small: Inter 400, 12px, line-height 1.333 */
+.link-sm {
+  font-size: 12px;
+  line-height: 1.333;
+}
+
+/* link/medium: Inter 400, 14px, line-height 1.21 */
+.link-md {
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+/* link/large: Inter 400, 16px, line-height 1.21 */
+.link-lg {
+  font-size: 16px;
+  line-height: 1.21;
+}
+
+/* ── With icon (type=icon) ────────────────── */
+/* Figma: gap 4px, icon 16×16px */
+.link-icon {
+  gap: 4px;
+}
+
+.link-icon-svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.link-icon-svg svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}

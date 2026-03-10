@@ -1,0 +1,160 @@
+/* ============================================
+   Button Component
+   MonoSchemes Design System
+   Figma: Component Set '3:76' (Button)
+   ============================================ */
+
+/* --- Navigation --- */
+.component-nav {
+  padding: 16px;
+  border-bottom: 1px solid #000;
+  background: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.component-nav a {
+  color: var(--color-text-primary, #2B2F36);
+  text-decoration: none;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.component-nav a:hover {
+  color: var(--color-text-secondary, #40444A);
+  text-decoration: underline;
+}
+
+/* --- Demo Container --- */
+.demo-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg, 50px) var(--spacing-sm, 16px);
+}
+
+.demo-section {
+  margin-top: var(--spacing-lg, 50px);
+}
+
+.demo-section:first-of-type {
+  margin-top: var(--spacing-md, 24px);
+}
+
+.demo-section h2 {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary, #2B2F36);
+  margin: 0 0 var(--spacing-md, 24px) 0;
+  padding-bottom: var(--spacing-xs, 8px);
+  border-bottom: 1px solid #000;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md, 24px);
+  align-items: center;
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+.demo-label {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  color: var(--color-text-secondary, #40444A);
+  width: 100%;
+  margin-bottom: -12px;
+}
+
+/* ============================================
+   Button Base
+   Figma: layout_KOOSBQ — padding 12px, gap 8px
+   Button/Center: Inter 700 12px, line-height 1.33
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+/* ── Primary ──────────────────────────────── */
+/* Figma: fill_ASSGLI (#000), text fill_WAY14V (#FFF), stroke_3D45HE 1px #000 */
+.btn-primary {
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+}
+
+.btn-primary:hover {
+  background: var(--color-text-secondary, #40444A);
+  border-color: var(--color-text-secondary, #40444A);
+}
+
+.btn-primary:active {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Secondary ────────────────────────────── */
+/* Figma: fill_D0ORSF (#FFF), text fill_0O7YRQ (#000), stroke 1px #000 */
+.btn-secondary {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-hover, #E2E5E9);
+}
+
+.btn-secondary:active {
+  background: #d0d3d7;
+}
+
+.btn-secondary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Disabled ─────────────────────────────── */
+/* Figma: fill_HRYT99 (#D9D9D9), text fill_URLT57 (#666666) */
+.btn-disabled,
+.btn:disabled {
+  background: #D9D9D9;
+  color: #666666;
+  border-color: #D9D9D9;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Sizes (optional) ─────────────────────── */
+.btn-sm {
+  padding: 8px 12px;
+  font-size: 11px;
+}
+
+.btn-lg {
+  padding: 16px 24px;
+  font-size: 14px;
+}

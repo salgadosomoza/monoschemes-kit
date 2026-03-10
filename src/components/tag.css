@@ -1,0 +1,138 @@
+/* ============================================
+   Tag Component
+   MonoSchemes Design System
+   Figma: Component Set '285:4420' (Tag)
+   ============================================ */
+
+/* --- Navigation --- */
+.component-nav {
+  padding: 16px;
+  border-bottom: 1px solid #000;
+  background: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.component-nav a {
+  color: var(--color-text-primary, #2B2F36);
+  text-decoration: none;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.component-nav a:hover {
+  color: var(--color-text-secondary, #40444A);
+  text-decoration: underline;
+}
+
+/* --- Demo Container --- */
+.demo-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--spacing-lg, 50px) var(--spacing-sm, 16px);
+}
+
+/* Dark background section for Tag (canvas is #000 in Figma) */
+.demo-dark {
+  background: #000000;
+  padding: var(--spacing-md, 24px);
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+.demo-light {
+  background: #FFFFFF;
+  padding: var(--spacing-md, 24px);
+  border: 1px solid #E2E5E9;
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+.demo-section {
+  margin-top: var(--spacing-lg, 50px);
+}
+
+.demo-section:first-of-type {
+  margin-top: var(--spacing-md, 24px);
+}
+
+.demo-section h2 {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary, #2B2F36);
+  margin: 0 0 var(--spacing-md, 24px) 0;
+  padding-bottom: var(--spacing-xs, 8px);
+  border-bottom: 1px solid #000;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md, 24px);
+  align-items: center;
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+.demo-label {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary, #40444A);
+  margin-bottom: 8px;
+}
+
+/* ============================================
+   Tag
+   Figma: layout_UHYQZC — padding 8px, gap 8px, row
+   fill_K3B741 = #737373 (background)
+   stroke_MJEI2A = 1px solid #FFFFFF (border)
+   caption: Inter 400, 12px, line-height 1.21
+   fill_PCY4T2 = #FFFFFF (text)
+   ============================================ */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs, 8px);
+  padding: var(--spacing-xs, 8px);
+  background: #737373;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #FFFFFF;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ── Tag Group ────────────────────────────── */
+/* Figma: layout_RR7VQN — row, gap 8px */
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs, 8px);
+  align-items: center;
+}
+
+/* ── Overflow tag (+N) ────────────────────── */
+/* Same style as a normal tag — the "+3" is just text content */
+.tag-overflow {
+  background: #737373;
+  border-color: #FFFFFF;
+  cursor: default;
+}
+
+/* ── Tag Group with overflow container ────── */
+.tag-group-overflow {
+  display: flex;
+  gap: var(--spacing-xs, 8px);
+  align-items: center;
+}
+
+/* Hidden tags (when overflow active) */
+.tag-hidden {
+  display: none;
+}

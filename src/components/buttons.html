@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <!-- Import all button styles -->
+  <link rel="stylesheet" href="button.css">
+  <link rel="stylesheet" href="button-icon.css">
+  <link rel="stylesheet" href="button-text.css">
+  <style>
+    /* Overview grid */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--spacing-md, 24px);
+      margin-top: var(--spacing-md, 24px);
+    }
+
+    .component-card-link {
+      display: block;
+      border: 1px solid #000;
+      background: #FFFFFF;
+      padding: var(--spacing-sm, 16px);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+
+    .component-card-link:hover {
+      background: var(--color-bg-surface, #F6F7F9);
+    }
+
+    .card-title {
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text-primary, #2B2F36);
+      margin: 0 0 12px 0;
+    }
+
+    .card-preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ── Spec table ── */
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 14px;
+      margin-top: var(--spacing-xs, 8px);
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 8px 12px;
+      text-align: left;
+      border: 1px solid #000;
+    }
+
+    .spec-table th {
+      background: var(--color-bg-surface, #F6F7F9);
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .spec-table tr:nth-child(even) td {
+      background: var(--color-bg-surface, #F6F7F9);
+    }
+
+    .swatch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .swatch-dot {
+      width: 14px;
+      height: 14px;
+      border: 1px solid #000;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container" style="max-width: 900px;">
+    <h1>Buttons</h1>
+    <p class="body1">Button component library — three types, multiple variants and states.</p>
+
+    <!-- Component cards -->
+    <div class="demo-section">
+      <h2>Components</h2>
+      <div class="overview-grid">
+
+        <a href="button.html" class="component-card-link">
+          <p class="card-title">Button</p>
+          <div class="card-preview">
+            <button class="btn btn-primary" tabindex="-1">Primary</button>
+            <button class="btn btn-secondary" tabindex="-1">Secondary</button>
+            <button class="btn btn-disabled" tabindex="-1" disabled>Disabled</button>
+          </div>
+        </a>
+
+        <a href="button-icon.html" class="component-card-link">
+          <p class="card-title">Button with Icon</p>
+          <div class="card-preview">
+            <button class="btn btn-primary btn-icon icon-left" tabindex="-1">
+              <span class="btn-icon-svg" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              </span>
+              Export
+            </button>
+            <button class="btn btn-secondary btn-icon icon-right" tabindex="-1">
+              Next
+              <span class="btn-icon-svg" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+              </span>
+            </button>
+          </div>
+        </a>
+
+        <a href="button-text.html" class="component-card-link">
+          <p class="card-title">Button Text</p>
+          <div class="card-preview" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+            <button class="btn-text" tabindex="-1">
+              <span class="btn-text-label">Default</span>
+            </button>
+            <button class="btn-text btn-text-disabled" tabindex="-1" disabled>
+              <span class="btn-text-label">Disabled</span>
+            </button>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- All variants in one place -->
+    <div class="demo-section">
+      <h2>All variants</h2>
+
+      <p class="demo-label" style="margin-bottom: 12px;">Button — Primary</p>
+      <div class="demo-row">
+        <button class="btn btn-primary" type="button">Default</button>
+        <button class="btn btn-primary" type="button" style="background:#40444A;border-color:#40444A;">Hover</button>
+        <button class="btn btn-primary" type="button" style="background:#1a1a1a;border-color:#1a1a1a;">Active</button>
+        <button class="btn btn-disabled" type="button" disabled aria-disabled="true">Disabled</button>
+      </div>
+
+      <p class="demo-label" style="margin-bottom: 12px;">Button — Secondary</p>
+      <div class="demo-row">
+        <button class="btn btn-secondary" type="button">Default</button>
+        <button class="btn btn-secondary" type="button" style="background:#E2E5E9;">Hover</button>
+        <button class="btn btn-secondary" type="button" style="background:#d0d3d7;">Active</button>
+        <button class="btn btn-disabled" type="button" disabled aria-disabled="true">Disabled</button>
+      </div>
+
+      <p class="demo-label" style="margin-bottom: 12px;">Button with Icon — Primary, icon left</p>
+      <div class="demo-row">
+        <button class="btn btn-primary btn-icon icon-left" type="button">
+          <span class="btn-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+          Download
+        </button>
+        <button class="btn btn-secondary btn-icon icon-left" type="button">
+          <span class="btn-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </span>
+          Search
+        </button>
+        <button class="btn btn-disabled btn-icon icon-left" type="button" disabled aria-disabled="true">
+          <span class="btn-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+          Disabled
+        </button>
+      </div>
+
+      <p class="demo-label" style="margin-bottom: 12px;">Button with Icon — Secondary, icon right</p>
+      <div class="demo-row">
+        <button class="btn btn-secondary btn-icon icon-right" type="button">
+          Prev
+          <span class="btn-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </span>
+        </button>
+        <button class="btn btn-primary btn-icon icon-right" type="button">
+          Next
+          <span class="btn-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <p class="demo-label" style="margin-bottom: 12px;">Button Text</p>
+      <div class="demo-row">
+        <button class="btn-text" type="button"><span class="btn-text-label">Default</span></button>
+        <button class="btn-text" type="button" style="color:#40444A;"><span class="btn-text-label" style="border-color:#40444A;">Hover</span></button>
+        <button class="btn-text btn-text-disabled" type="button" disabled aria-disabled="true"><span class="btn-text-label">Disabled</span></button>
+      </div>
+    </div>
+
+    <!-- Tokens / Spec -->
+    <div class="demo-section">
+      <h2>Design Tokens</h2>
+      <table class="spec-table" aria-label="Button design tokens">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>Value</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Button/Center font</td>
+            <td>Inter 700 / 12px / 1.333</td>
+            <td>All button labels</td>
+          </tr>
+          <tr>
+            <td>Padding (base)</td>
+            <td>12px</td>
+            <td>Button, Button Text vertical</td>
+          </tr>
+          <tr>
+            <td>Padding (icon)</td>
+            <td>8px 8px 8px 12px / 8px 12px</td>
+            <td>Button with Icon</td>
+          </tr>
+          <tr>
+            <td>Gap</td>
+            <td>8px</td>
+            <td>Icon ↔ label spacing</td>
+          </tr>
+          <tr>
+            <td>Icon size</td>
+            <td>24 × 24px</td>
+            <td>Button with Icon SVGs</td>
+          </tr>
+          <tr>
+            <td>Primary bg</td>
+            <td><span class="swatch"><span class="swatch-dot" style="background:#000;"></span>#000000</span></td>
+            <td>btn-primary background</td>
+          </tr>
+          <tr>
+            <td>Primary text</td>
+            <td><span class="swatch"><span class="swatch-dot" style="background:#FFF;"></span>#FFFFFF</span></td>
+            <td>btn-primary label</td>
+          </tr>
+          <tr>
+            <td>Secondary bg</td>
+            <td><span class="swatch"><span class="swatch-dot" style="background:#FFF;"></span>#FFFFFF</span></td>
+            <td>btn-secondary background</td>
+          </tr>
+          <tr>
+            <td>Secondary border</td>
+            <td>1px solid #000000</td>
+            <td>btn-secondary outline</td>
+          </tr>
+          <tr>
+            <td>Disabled bg</td>
+            <td><span class="swatch"><span class="swatch-dot" style="background:#D9D9D9;"></span>#D9D9D9</span></td>
+            <td>btn-disabled background</td>
+          </tr>
+          <tr>
+            <td>Disabled text</td>
+            <td><span class="swatch"><span class="swatch-dot" style="background:#666;"></span>#666666</span></td>
+            <td>btn-disabled label</td>
+          </tr>
+          <tr>
+            <td>Text underline</td>
+            <td>border-bottom: 1px solid #000</td>
+            <td>btn-text default</td>
+          </tr>
+          <tr>
+            <td>Text disabled underline</td>
+            <td>border-bottom: 1px dashed #666</td>
+            <td>btn-text disabled</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div><!-- /.demo-container -->
+</body>
+</html>
