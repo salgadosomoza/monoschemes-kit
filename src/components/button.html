@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="button.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Button</h1>
+    <p class="body1">Base button component — primary, secondary, and disabled variants.</p>
+
+    <!-- Variants -->
+    <div class="demo-section">
+      <h2>Variants</h2>
+      <div class="demo-row">
+        <button class="btn btn-primary" type="button">Primary</button>
+        <button class="btn btn-secondary" type="button">Secondary</button>
+        <button class="btn btn-disabled" type="button" disabled aria-disabled="true">Disabled</button>
+      </div>
+    </div>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <p class="demo-label">Primary</p>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn btn-primary" type="button">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
+          <button class="btn btn-primary" type="button" style="background:#40444A;border-color:#40444A;">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Active (simulate)</div>
+          <button class="btn btn-primary" type="button" style="background:#1a1a1a;border-color:#1a1a1a;">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Disabled</div>
+          <button class="btn btn-disabled" type="button" disabled aria-disabled="true">Button</button>
+        </div>
+      </div>
+
+      <p class="demo-label">Secondary</p>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn btn-secondary" type="button">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
+          <button class="btn btn-secondary" type="button" style="background:#E2E5E9;">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Active (simulate)</div>
+          <button class="btn btn-secondary" type="button" style="background:#d0d3d7;">Button</button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Disabled</div>
+          <button class="btn btn-disabled" type="button" disabled aria-disabled="true">Button</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- As link -->
+    <div class="demo-section">
+      <h2>As anchor</h2>
+      <div class="demo-row">
+        <a href="#" class="btn btn-primary">Primary link</a>
+        <a href="#" class="btn btn-secondary">Secondary link</a>
+        <a class="btn btn-disabled" aria-disabled="true" tabindex="-1">Disabled link</a>
+      </div>
+    </div>
+
+    <!-- Full width -->
+    <div class="demo-section">
+      <h2>Full width</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
+        <button class="btn btn-primary" type="button" style="width:100%; justify-content:center;">Primary full width</button>
+        <button class="btn btn-secondary" type="button" style="width:100%; justify-content:center;">Secondary full width</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="button.js"></script>
+</body>
+</html>

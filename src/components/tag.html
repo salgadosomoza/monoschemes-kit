@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="tag.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Tag</h1>
+    <p class="body1">Tag component to represent metadata or categories — individual and grouped variants.</p>
+
+    <!-- Single tag -->
+    <div class="demo-section">
+      <h2>Individual tags</h2>
+      <!-- Shown on dark background matching Figma canvas (#000) -->
+      <div class="demo-dark" aria-label="Tags on dark background">
+        <div class="demo-row">
+          <span class="tag">Tag name</span>
+          <span class="tag">One</span>
+          <span class="tag">Two</span>
+          <span class="tag">Thirteen</span>
+          <span class="tag">Four</span>
+          <span class="tag">Five</span>
+        </div>
+      </div>
+      <!-- Also on light for reference -->
+      <div class="demo-light" aria-label="Tags on light background">
+        <div class="demo-row">
+          <span class="tag">Tag name</span>
+          <span class="tag">One</span>
+          <span class="tag">Two</span>
+          <span class="tag">Thirteen</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tag Group (full) -->
+    <!-- Figma: Tags frame — layout_RR7VQN, row, gap 8px, 5 items -->
+    <div class="demo-section">
+      <h2>Tag group</h2>
+      <p class="body1" style="max-width: 480px; margin-bottom: 16px;">
+        A tag group is suitable in scenarios where you want to visually organize
+        and represent a collection of tags as a cohesive unit.
+      </p>
+      <div class="demo-dark">
+        <div class="tag-group" role="list" aria-label="Tag group">
+          <span class="tag" role="listitem">One</span>
+          <span class="tag" role="listitem">Two</span>
+          <span class="tag" role="listitem">Thirteen</span>
+          <span class="tag" role="listitem">Four</span>
+          <span class="tag" role="listitem">Five</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tag Group with overflow (+3) -->
+    <!-- Figma: second Tags frame — layout_IKX2LP, shows "One", "Two", "+3" -->
+    <div class="demo-section">
+      <h2>Tag group with overflow</h2>
+      <p class="body1" style="max-width: 480px; margin-bottom: 16px;">
+        When there are more tags than can be displayed, a "+N" overflow indicator
+        shows the remaining count. Click to expand.
+      </p>
+      <div class="demo-dark">
+        <div class="tag-group-overflow" id="tag-overflow-group" role="list" aria-label="Tags with overflow">
+          <span class="tag" role="listitem" data-index="0">One</span>
+          <span class="tag" role="listitem" data-index="1">Two</span>
+          <!-- Overflow indicator (initially shown) -->
+          <button class="tag tag-overflow" id="tag-overflow-btn" type="button" aria-label="Show 3 more tags">+3</button>
+          <!-- Hidden tags (shown on expand) -->
+          <span class="tag tag-hidden" role="listitem" data-index="2">Thirteen</span>
+          <span class="tag tag-hidden" role="listitem" data-index="3">Four</span>
+          <span class="tag tag-hidden" role="listitem" data-index="4">Five</span>
+        </div>
+      </div>
+
+      <!-- Interactive overflow demo -->
+      <div style="margin-top: 32px;">
+        <div class="demo-label">Interactive — configurable overflow limit</div>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <label style="font-family: Inter, sans-serif; font-size: 14px; color: #40444A;">
+            Show
+            <select id="overflow-limit" style="margin: 0 6px; padding: 4px 8px; border: 1px solid #000; font-family: inherit; font-size: 14px;">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            tags
+          </label>
+          <button type="button" id="rebuild-overflow" style="padding: 6px 12px; border: 1px solid #000; background: #000; color: #FFF; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; text-transform: uppercase;">Apply</button>
+        </div>
+        <div class="demo-dark">
+          <div id="live-overflow-group" class="tag-group-overflow" role="list" aria-label="Live overflow demo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="tag.js"></script>
+</body>
+</html>

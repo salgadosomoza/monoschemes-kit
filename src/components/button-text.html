@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Text - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="button-text.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Button Text</h1>
+    <p class="body1">Link-style button — no background, text with border-bottom underline.</p>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn-text" type="button">
+            <span class="btn-text-label">Button</span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
+          <button class="btn-text" type="button" style="color:#40444A;">
+            <span class="btn-text-label" style="border-color:#40444A;">Button</span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Disabled</div>
+          <button class="btn-text btn-text-disabled" type="button" disabled aria-disabled="true">
+            <span class="btn-text-label">Button</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- As anchor -->
+    <div class="demo-section">
+      <h2>As anchor</h2>
+      <div class="demo-row">
+        <a href="#" class="btn-text">
+          <span class="btn-text-label">Learn more</span>
+        </a>
+        <a href="#" class="btn-text">
+          <span class="btn-text-label">View details</span>
+        </a>
+        <a class="btn-text btn-text-disabled" aria-disabled="true" tabindex="-1">
+          <span class="btn-text-label">Unavailable</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- In context -->
+    <div class="demo-section">
+      <h2>In context</h2>
+      <p class="body1" style="max-width: 480px;">
+        This is a paragraph of text with an inline
+        <button class="btn-text" type="button" style="padding: 0; vertical-align: baseline;">
+          <span class="btn-text-label">text button</span>
+        </button>
+        that flows naturally within the body copy.
+      </p>
+
+      <div class="demo-row" style="margin-top: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px; border: 1px solid #000; padding: 16px;">
+          <span class="body1" style="flex: 1;">Action required</span>
+          <button class="btn-text" type="button">
+            <span class="btn-text-label">Dismiss</span>
+          </button>
+          <button class="btn btn-primary" type="button" style="padding: 8px 12px;">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

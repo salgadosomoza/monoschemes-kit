@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagination - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="pagination.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Pagination</h1>
+    <p class="body1">Navigation component for paging through content — Prev/Next controls with numbered pages.</p>
+
+    <!-- Default demo — page 2 active -->
+    <div class="demo-section">
+      <h2>Default — page 2 active</h2>
+      <!-- Figma: pagination layout_6XVUCO — row, gap 40px -->
+      <nav class="pagination" aria-label="Pagination example" data-current-page="2" data-total-pages="5" id="pag-default">
+        <!-- Prev — layout_VR3150, padding 8px 12px, border 1px solid #000 -->
+        <button class="pag-btn pag-prev" type="button" aria-label="Previous page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+          Prev
+        </button>
+
+        <!-- Pages — layout_OV24LH -->
+        <div class="pagination-pages" role="group" aria-label="Page numbers">
+          <!-- Active: full border (layout_M9M2P2, secondary button) -->
+          <button class="pag-btn pag-page" type="button" aria-label="Page 1">1</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 2" aria-current="page">2</button>
+          <!-- Inactive: border-bottom only (stroke_F0VRKT: 0px 0px 1px #000) -->
+          <button class="pag-btn pag-page" type="button" aria-label="Page 3">3</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 4">4</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 5">5</button>
+        </div>
+
+        <!-- Next — layout_VR3150, padding 8px 12px, border 1px solid #000 -->
+        <button class="pag-btn pag-next" type="button" aria-label="Next page">
+          Next
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- First page (Prev disabled) -->
+    <div class="demo-section">
+      <h2>First page — Prev disabled</h2>
+      <nav class="pagination" aria-label="Pagination first page" data-current-page="1" data-total-pages="5" id="pag-first">
+        <button class="pag-btn pag-prev" type="button" aria-label="Previous page" disabled aria-disabled="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+          Prev
+        </button>
+        <div class="pagination-pages" role="group" aria-label="Page numbers">
+          <button class="pag-btn pag-page" type="button" aria-current="page" aria-label="Page 1">1</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 2">2</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 3">3</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 4">4</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 5">5</button>
+        </div>
+        <button class="pag-btn pag-next" type="button" aria-label="Next page">
+          Next
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Last page (Next disabled) -->
+    <div class="demo-section">
+      <h2>Last page — Next disabled</h2>
+      <nav class="pagination" aria-label="Pagination last page" data-current-page="5" data-total-pages="5" id="pag-last">
+        <button class="pag-btn pag-prev" type="button" aria-label="Previous page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+          Prev
+        </button>
+        <div class="pagination-pages" role="group" aria-label="Page numbers">
+          <button class="pag-btn pag-page" type="button" aria-label="Page 1">1</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 2">2</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 3">3</button>
+          <button class="pag-btn pag-page" type="button" aria-label="Page 4">4</button>
+          <button class="pag-btn pag-page" type="button" aria-current="page" aria-label="Page 5">5</button>
+        </div>
+        <button class="pag-btn pag-next" type="button" aria-label="Next page" disabled aria-disabled="true">
+          Next
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Interactive demo -->
+    <div class="demo-section">
+      <h2>Interactive</h2>
+      <p class="body1" style="margin-bottom: 24px;">Click page numbers or Prev/Next to navigate.</p>
+
+      <nav class="pagination" aria-label="Interactive pagination" id="pag-interactive" data-current-page="2" data-total-pages="5">
+        <button class="pag-btn pag-prev" type="button" aria-label="Previous page">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+          </svg>
+          Prev
+        </button>
+        <div class="pagination-pages" role="group" aria-label="Page numbers" id="pag-interactive-pages"></div>
+        <button class="pag-btn pag-next" type="button" aria-label="Next page">
+          Next
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
+        </button>
+      </nav>
+
+      <p class="body1" id="pag-status" style="margin-top: 24px; color: #40444A; font-size: 14px;">
+        Current page: <strong>2</strong> of 5
+      </p>
+    </div>
+  </div>
+
+  <script src="pagination.js"></script>
+</body>
+</html>

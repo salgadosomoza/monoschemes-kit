@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="link.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Link</h1>
+    <p class="body1">Link component for navigation — text and icon variants in three sizes.</p>
+
+    <!-- Default (text only) -->
+    <div class="demo-section">
+      <h2>Type: Default</h2>
+      <div class="demo-row">
+        <div class="demo-col">
+          <div class="demo-label">Small — 12px</div>
+          <a href="#" class="link link-sm">Link</a>
+        </div>
+        <div class="demo-col">
+          <div class="demo-label">Medium — 14px</div>
+          <a href="#" class="link link-md">Link</a>
+        </div>
+        <div class="demo-col">
+          <div class="demo-label">Large — 16px</div>
+          <a href="#" class="link link-lg">Link</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon (text + download icon) -->
+    <div class="demo-section">
+      <h2>Type: Icon</h2>
+      <!-- Figma: gap 4px, icon 16×16px, icon on right -->
+      <div class="demo-row">
+        <div class="demo-col">
+          <div class="demo-label">Small — 12px</div>
+          <a href="#" class="link link-sm link-icon">
+            Download
+            <span class="link-icon-svg" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="demo-col">
+          <div class="demo-label">Medium — 14px</div>
+          <a href="#" class="link link-md link-icon">
+            Download
+            <span class="link-icon-svg" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="demo-col">
+          <div class="demo-label">Large — 16px</div>
+          <a href="#" class="link link-lg link-icon">
+            Download
+            <span class="link-icon-svg" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- All sizes together -->
+    <div class="demo-section">
+      <h2>All sizes — comparison</h2>
+      <div class="demo-col">
+        <a href="#" class="link link-sm">Small link (12px Inter 400)</a>
+        <a href="#" class="link link-md">Medium link (14px Inter 400)</a>
+        <a href="#" class="link link-lg">Large link (16px Inter 400)</a>
+        <a href="#" class="link link-sm link-icon">
+          Small with icon
+          <span class="link-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+        </a>
+        <a href="#" class="link link-md link-icon">
+          Medium with icon
+          <span class="link-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+        </a>
+        <a href="#" class="link link-lg link-icon">
+          Large with icon
+          <span class="link-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- In context -->
+    <div class="demo-section">
+      <h2>In context</h2>
+      <p class="body1" style="max-width: 540px; line-height: 1.7;">
+        This is a paragraph of body text. You can include
+        <a href="#" class="link link-lg">inline links</a>
+        that blend naturally with the surrounding copy. Links can also appear at
+        the end of a section for
+        <a href="#" class="link link-lg link-icon">
+          downloading a file
+          <span class="link-icon-svg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </span>
+        </a>
+        or
+        <a href="#" class="link link-lg">navigating elsewhere</a>.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* ============================================
+   Button with Icon Component
+   MonoSchemes Design System
+   Figma: Component Set '434:2495' (Button with Icon)
+   ============================================ */
+
+@import url('./button.css');
+
+/* ============================================
+   Button with Icon
+   Figma buttonLeft=True:  padding: 8px 8px 8px 12px  (icon on left, text on right)
+   Figma buttonLeft=False: padding: 8px 12px (text on left, icon on right → 8px 12px)
+   gap: 8px, icon size: 24×24
+   ============================================ */
+.btn-icon {
+  gap: 8px;
+}
+
+/* Icon left (buttonLeft=True): icon gets 8px margin, text side gets 12px */
+.btn-icon.icon-left {
+  padding: 8px 12px 8px 8px;
+  flex-direction: row;
+}
+
+/* Icon right (buttonLeft=False): text side 12px, icon side 8px */
+.btn-icon.icon-right {
+  padding: 8px 8px 8px 12px;
+  flex-direction: row;
+}
+
+/* Icon element inside button */
+.btn-icon-svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon-svg svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Inherit color from button variants automatically */

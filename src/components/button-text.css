@@ -1,0 +1,72 @@
+/* ============================================
+   Button Text (link style) Component
+   MonoSchemes Design System
+   Figma: Component Set '76:808' (Button/Text)
+   ============================================ */
+
+@import url('./button.css');
+
+/* ============================================
+   Button Text
+   Figma: no background, no border, padding 12px vertical,
+   border-bottom 1px solid #000 on text span
+   state=default: stroke_K5PN36 → 0px 0px 1px #000
+   state=disabled: stroke_F82QS1 → 0px 0px 1px #666, dashes [4,2]
+   ============================================ */
+.btn-text {
+  background: transparent;
+  border: none;
+  padding: 12px 0;
+  color: #000000;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.btn-text-label {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1px;
+  transition: border-color 0.15s;
+}
+
+.btn-text:hover {
+  color: var(--color-text-secondary, #40444A);
+}
+
+.btn-text:hover .btn-text-label {
+  border-color: var(--color-text-secondary, #40444A);
+}
+
+.btn-text:active {
+  color: #1a1a1a;
+}
+
+.btn-text:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+/* ── Disabled ─────────────────────────────── */
+/* Figma: stroke_F82QS1 — color #666, dashes [4,2] */
+.btn-text-disabled,
+.btn-text:disabled {
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-text-disabled .btn-text-label,
+.btn-text:disabled .btn-text-label {
+  border-bottom: 1px dashed #666666;
+}

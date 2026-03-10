@@ -1,0 +1,160 @@
+/* ============================================
+   Pagination Component
+   MonoSchemes Design System
+   Figma: Component '8:335' (pagination)
+   Inline button styles — do NOT import button.css
+   ============================================ */
+
+/* --- Navigation --- */
+.component-nav {
+  padding: 16px;
+  border-bottom: 1px solid #000;
+  background: #FFFFFF;
+  margin-bottom: 24px;
+}
+
+.component-nav a {
+  color: var(--color-text-primary, #2B2F36);
+  text-decoration: none;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.component-nav a:hover {
+  color: var(--color-text-secondary, #40444A);
+  text-decoration: underline;
+}
+
+/* --- Demo Container --- */
+.demo-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--spacing-lg, 50px) var(--spacing-sm, 16px);
+}
+
+.demo-section {
+  margin-top: var(--spacing-lg, 50px);
+}
+
+.demo-section:first-of-type {
+  margin-top: var(--spacing-md, 24px);
+}
+
+.demo-section h2 {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary, #2B2F36);
+  margin: 0 0 var(--spacing-md, 24px) 0;
+  padding-bottom: var(--spacing-xs, 8px);
+  border-bottom: 1px solid #000;
+}
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md, 24px);
+  align-items: center;
+  margin-bottom: var(--spacing-md, 24px);
+}
+
+/* ============================================
+   Pagination
+   Figma: layout_6XVUCO — row, gap 40px
+   ============================================ */
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ── Pages group ──────────────────────────── */
+/* Figma: layout_OV24LH — row, alignItems center */
+.pagination-pages {
+  display: flex;
+  align-items: center;
+}
+
+/* ── Shared button base ───────────────────── */
+/* Button/Center: Inter 700, 12px, line-height 1.333 */
+.pag-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #000000;
+  background: #FFFFFF;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, opacity 0.15s;
+  user-select: none;
+  text-decoration: none;
+}
+
+.pag-btn:hover:not(:disabled):not([aria-disabled="true"]) {
+  background: var(--color-bg-hover, #E2E5E9);
+}
+
+/* ── Prev / Next ──────────────────────────── */
+/* Figma: layout_VR3150 — padding 8px 12px, border 1px solid #000
+   Icon: 24×24px (chevron_left / chevron_right) */
+.pag-prev,
+.pag-next {
+  padding: 8px 12px;
+  border: 1px solid #000000;
+}
+
+.pag-prev svg,
+.pag-next svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ── Page numbers ─────────────────────────── */
+/* Active page (layout_M9M2P2):
+     secondary button style — full border 1px solid #000, padding 12px
+   Inactive pages (layout_K442YZ / Button/Text):
+     no border, padding 12px, border-bottom only (stroke_F0VRKT: 0px 0px 1px #000)
+*/
+.pag-page {
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  margin-left: -1px;
+}
+
+.pag-page:first-child {
+  margin-left: 0;
+}
+
+.pag-page[aria-current="page"] {
+  border: 1px solid #000000;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Disabled state ───────────────────────── */
+.pag-btn:disabled,
+.pag-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Focus ────────────────────────────────── */
+.pag-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+}
