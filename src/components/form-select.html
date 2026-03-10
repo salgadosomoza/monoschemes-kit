@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Select - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-select.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Select</h1>
+    <p class="body1">Dropdown select component with chevron icon.</p>
+
+    <!-- Default -->
+    <div class="demo-section">
+      <h2>Default</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="select-default">Label</label>
+          <div class="select-wrapper">
+            <select class="form-select" id="select-default">
+              <option value="" disabled selected>Select an option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </div>
+          <span class="form-helper">Helper text</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="select-selected">With value</label>
+          <div class="select-wrapper">
+            <select class="form-select" id="select-selected">
+              <option value="" disabled>Select an option</option>
+              <option value="2" selected>Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="select-disabled">Disabled</label>
+          <div class="select-wrapper">
+            <select class="form-select" id="select-disabled" disabled>
+              <option value="" disabled selected>Select an option</option>
+              <option value="1">Option 1</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </div>
+          <span class="form-helper">This field is disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Examples -->
+    <div class="demo-section">
+      <h2>Examples</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="select-country">Country</label>
+          <div class="select-wrapper">
+            <select class="form-select" id="select-country">
+              <option value="" disabled selected>Select country</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="es">Spain</option>
+              <option value="fr">France</option>
+              <option value="de">Germany</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="select-role">Role</label>
+          <div class="select-wrapper">
+            <select class="form-select" id="select-role">
+              <option value="" disabled selected>Select role</option>
+              <option value="admin">Admin</option>
+              <option value="editor">Editor</option>
+              <option value="viewer">Viewer</option>
+            </select>
+            <svg class="select-chevron" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 10l5 5 5-5z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Input - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-input.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Input</h1>
+    <p class="body1">Text input component with multiple states and types.</p>
+
+    <!-- Default state -->
+    <div class="demo-section">
+      <h2>Default</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="input-default">Label</label>
+          <input class="form-input" id="input-default" type="text" placeholder="Placeholder text">
+          <span class="form-helper">Helper text</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="input-focused">Focused</label>
+          <input class="form-input" id="input-focused" type="text" placeholder="Click to focus" value="Input value">
+          <span class="form-helper">Helper text</span>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="input-error">Error</label>
+          <input class="form-input error" id="input-error" type="text" value="Invalid value" aria-describedby="input-error-msg" aria-invalid="true">
+          <span class="form-helper error" id="input-error-msg">This field is required</span>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="input-disabled">Disabled</label>
+          <input class="form-input" id="input-disabled" type="text" placeholder="Disabled" disabled>
+          <span class="form-helper">This field is disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Types -->
+    <div class="demo-section">
+      <h2>Types</h2>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="input-text">Text</label>
+          <input class="form-input" id="input-text" type="text" placeholder="Enter text">
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="input-email">Email</label>
+          <input class="form-input" id="input-email" type="email" placeholder="email@example.com" autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="input-number">Number</label>
+          <input class="form-input" id="input-number" type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="demo-row">
+        <div class="form-field">
+          <label class="form-label" for="input-password">Password</label>
+          <div class="input-wrapper">
+            <input class="form-input" id="input-password" type="password" placeholder="Enter password" autocomplete="current-password">
+            <button class="toggle-password" type="button" aria-label="Show password" data-target="input-password">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation demo -->
+    <div class="demo-section">
+      <h2>Validation</h2>
+      <form id="demo-form" novalidate>
+        <div class="demo-row">
+          <div class="form-field">
+            <label class="form-label" for="input-required">Required field</label>
+            <input class="form-input" id="input-required" type="text" placeholder="This field is required" required>
+            <span class="form-helper" id="input-required-msg"></span>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="input-email-val">Email validation</label>
+            <input class="form-input" id="input-email-val" type="email" placeholder="Valid email required" required>
+            <span class="form-helper" id="input-email-val-msg"></span>
+          </div>
+        </div>
+        <button type="submit" style="height:40px;padding:0 16px;border:1px solid #000;background:#000;color:#fff;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;">
+          Validate
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="form-input.js"></script>
+</body>
+</html>

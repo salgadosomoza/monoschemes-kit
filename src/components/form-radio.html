@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Radio Button - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-radio.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Radio Button</h1>
+    <p class="body1">Radio button component for single selection within a group.</p>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <label class="radio-field">
+          <input type="radio" name="radio-states" value="unchecked">
+          <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+          <span class="radio-label">Unchecked</span>
+        </label>
+
+        <label class="radio-field">
+          <input type="radio" name="radio-states" value="checked" checked>
+          <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+          <span class="radio-label">Checked</span>
+        </label>
+
+        <label class="radio-field">
+          <input type="radio" name="radio-disabled" value="disabled" disabled>
+          <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+          <span class="radio-label">Disabled</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Radio Group -->
+    <div class="demo-section">
+      <h2>Radio Group</h2>
+      <div class="demo-row">
+        <fieldset style="border: none; padding: 0; margin: 0;">
+          <legend class="radio-group-label">Preferred contact method</legend>
+          <div class="radio-group" role="radiogroup" aria-labelledby="contact-legend">
+            <label class="radio-field">
+              <input type="radio" name="contact" value="email" checked>
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">Email</span>
+            </label>
+            <label class="radio-field">
+              <input type="radio" name="contact" value="phone">
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">Phone</span>
+            </label>
+            <label class="radio-field">
+              <input type="radio" name="contact" value="sms">
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">SMS</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset style="border: none; padding: 0; margin: 0;">
+          <legend class="radio-group-label">Plan</legend>
+          <div class="radio-group" role="radiogroup">
+            <label class="radio-field">
+              <input type="radio" name="plan" value="free" checked>
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">Free</span>
+            </label>
+            <label class="radio-field">
+              <input type="radio" name="plan" value="pro">
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">Pro</span>
+            </label>
+            <label class="radio-field">
+              <input type="radio" name="plan" value="enterprise">
+              <span class="radio-circle" aria-hidden="true"><span class="radio-dot"></span></span>
+              <span class="radio-label">Enterprise</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

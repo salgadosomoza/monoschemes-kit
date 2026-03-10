@@ -1,0 +1,68 @@
+/* ============================================
+   Form Toggle/Switch Component
+   MonoSchemes Design System
+   ============================================ */
+
+@import url('./forms.css');
+
+.toggle-field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs, 8px);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+
+.toggle-field input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-track {
+  width: 44px;
+  height: 24px;
+  border: 1px solid #000;
+  background: #FFFFFF;
+  border-radius: 12px;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #000;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle-field input:checked ~ .toggle-track {
+  background: #000;
+}
+
+.toggle-field input:checked ~ .toggle-track .toggle-thumb {
+  transform: translateX(20px);
+  background: #FFFFFF;
+}
+
+.toggle-field input:focus-visible ~ .toggle-track {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-field:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.toggle-label {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  color: var(--color-text-primary, #2B2F36);
+}

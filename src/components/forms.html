@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="forms.css">
+  <style>
+    /* Override form-field width for the overview page */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--spacing-md, 24px);
+    }
+
+    .component-card-link {
+      display: block;
+      border: 1px solid #000;
+      background: #FFFFFF;
+      padding: var(--spacing-sm, 16px);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
+    }
+
+    .component-card-link:hover {
+      background: var(--color-bg-surface, #F6F7F9);
+    }
+
+    .card-title {
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-text-primary, #2B2F36);
+      margin: 0 0 4px 0;
+    }
+
+    .card-desc {
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 13px;
+      color: var(--color-text-secondary, #40444A);
+      margin: 0;
+    }
+
+    /* Inline demo styles */
+    .inline-demo {
+      margin-top: var(--spacing-xs, 8px);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .form-input-demo {
+      width: 100%;
+      height: 36px;
+      padding: 0 8px;
+      border: 1px solid #000;
+      background: #FFFFFF;
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 13px;
+      color: #40444A;
+      box-sizing: border-box;
+    }
+
+    .toggle-track-demo {
+      display: inline-flex;
+      width: 44px;
+      height: 24px;
+      border: 1px solid #000;
+      border-radius: 12px;
+      background: #000;
+      position: relative;
+      align-items: center;
+    }
+
+    .toggle-thumb-demo {
+      position: absolute;
+      left: 22px;
+      width: 18px;
+      height: 18px;
+      background: #FFFFFF;
+      border-radius: 50%;
+    }
+
+    .checkbox-demo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checkbox-box-demo {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .select-demo {
+      position: relative;
+      width: 100%;
+    }
+
+    .select-demo-inner {
+      width: 100%;
+      height: 36px;
+      padding: 0 32px 0 8px;
+      border: 1px solid #000;
+      background: #FFFFFF;
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 13px;
+      color: #40444A;
+      box-sizing: border-box;
+      appearance: none;
+    }
+
+    .select-demo-chevron {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: #40444A;
+      pointer-events: none;
+    }
+
+    .search-demo {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-demo-input {
+      width: 100%;
+      height: 36px;
+      padding: 0 8px 0 32px;
+      border: 1px solid #000;
+      background: #FFFFFF;
+      font-family: var(--font-family, 'Inter', sans-serif);
+      font-size: 13px;
+      color: #40444A;
+      box-sizing: border-box;
+    }
+
+    .search-demo-icon {
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: #40444A;
+    }
+
+    .drop-zone-demo {
+      border: 1px dashed #000;
+      background: #FFFFFF;
+      padding: 16px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Forms</h1>
+    <p class="body1">Complete form component library for MonoSchemes Design System.</p>
+
+    <div class="demo-section">
+      <h2>Components</h2>
+      <div class="overview-grid">
+
+        <!-- Input -->
+        <a href="form-input.html" class="component-card-link">
+          <p class="card-title">Input</p>
+          <p class="card-desc">Text input with states: default, focused, error, disabled</p>
+          <div class="inline-demo">
+            <input class="form-input-demo" type="text" placeholder="Placeholder text" tabindex="-1">
+          </div>
+        </a>
+
+        <!-- Checkbox -->
+        <a href="form-checkbox.html" class="component-card-link">
+          <p class="card-title">Checkbox</p>
+          <p class="card-desc">Unchecked, checked, and indeterminate states</p>
+          <div class="inline-demo" style="display: flex; gap: 12px; margin-top: 8px;">
+            <div class="checkbox-demo">
+              <div class="checkbox-box-demo" style="background: #FFFFFF;"></div>
+              <span style="font-size:13px; color:#40444A;">Off</span>
+            </div>
+            <div class="checkbox-demo">
+              <div class="checkbox-box-demo">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <span style="font-size:13px; color:#40444A;">On</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Radio -->
+        <a href="form-radio.html" class="component-card-link">
+          <p class="card-title">Radio Button</p>
+          <p class="card-desc">Single selection within a group</p>
+          <div class="inline-demo" style="display: flex; gap: 12px; margin-top: 8px;">
+            <div class="checkbox-demo">
+              <div style="width:20px;height:20px;border:1px solid #000;border-radius:50%;background:#FFFFFF;"></div>
+              <span style="font-size:13px; color:#40444A;">Option A</span>
+            </div>
+            <div class="checkbox-demo">
+              <div style="width:20px;height:20px;border:1px solid #000;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;">
+                <div style="width:10px;height:10px;border-radius:50%;background:#000;"></div>
+              </div>
+              <span style="font-size:13px; color:#40444A;">Option B</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Toggle -->
+        <a href="form-toggle.html" class="component-card-link">
+          <p class="card-title">Toggle / Switch</p>
+          <p class="card-desc">On/off switch with animated thumb</p>
+          <div class="inline-demo" style="display: flex; gap: 16px; align-items: center; margin-top: 8px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:44px;height:24px;border:1px solid #000;border-radius:12px;background:#FFFFFF;position:relative;">
+                <div style="position:absolute;top:2px;left:2px;width:18px;height:18px;background:#000;border-radius:50%;"></div>
+              </div>
+              <span style="font-size:13px;color:#40444A;">Off</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div class="toggle-track-demo">
+                <div class="toggle-thumb-demo"></div>
+              </div>
+              <span style="font-size:13px;color:#40444A;">On</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Select -->
+        <a href="form-select.html" class="component-card-link">
+          <p class="card-title">Select</p>
+          <p class="card-desc">Dropdown with chevron icon and placeholder</p>
+          <div class="inline-demo">
+            <div class="select-demo">
+              <select class="select-demo-inner" tabindex="-1">
+                <option>Select an option</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+              <svg class="select-demo-chevron" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7 10l5 5 5-5z"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Search -->
+        <a href="form-search.html" class="component-card-link">
+          <p class="card-title">Search</p>
+          <p class="card-desc">Search input with icon and clear button</p>
+          <div class="inline-demo">
+            <div class="search-demo">
+              <svg class="search-demo-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+              </svg>
+              <input class="search-demo-input" type="text" placeholder="Search..." tabindex="-1">
+            </div>
+          </div>
+        </a>
+
+        <!-- Date -->
+        <a href="form-date.html" class="component-card-link">
+          <p class="card-title">Date</p>
+          <p class="card-desc">Date input with calendar icon</p>
+          <div class="inline-demo" style="position:relative;">
+            <input class="form-input-demo" type="text" placeholder="YYYY-MM-DD" tabindex="-1" style="padding-right:32px;">
+            <svg style="position:absolute;right:8px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#40444A;pointer-events:none;" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Textarea -->
+        <a href="form-textarea.html" class="component-card-link">
+          <p class="card-title">Textarea</p>
+          <p class="card-desc">Multi-line resizable text input</p>
+          <div class="inline-demo">
+            <textarea style="width:100%;min-height:60px;padding:6px 8px;border:1px solid #000;background:#FFFFFF;font-family:inherit;font-size:13px;color:#40444A;resize:none;box-sizing:border-box;" placeholder="Multi-line text..." tabindex="-1"></textarea>
+          </div>
+        </a>
+
+        <!-- File Upload -->
+        <a href="form-file.html" class="component-card-link">
+          <p class="card-title">File Upload</p>
+          <p class="card-desc">Button and drag &amp; drop variants</p>
+          <div class="inline-demo">
+            <div class="drop-zone-demo">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color:#40444A;">
+                <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+              </svg>
+              <span style="font-size:12px;color:#40444A;">Drop files or browse</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

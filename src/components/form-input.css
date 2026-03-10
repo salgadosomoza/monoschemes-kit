@@ -1,0 +1,46 @@
+/* ============================================
+   Form Input Component
+   MonoSchemes Design System
+   ============================================ */
+
+@import url('./forms.css');
+
+/* Input with icon wrapper */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper .form-input {
+  padding-right: 36px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--color-text-secondary, #40444A);
+  pointer-events: none;
+}
+
+/* Password toggle button */
+.input-wrapper .toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary, #40444A);
+}
+
+.input-wrapper .toggle-password:hover {
+  color: var(--color-text-primary, #2B2F36);
+}

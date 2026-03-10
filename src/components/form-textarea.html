@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Textarea - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-textarea.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Textarea</h1>
+    <p class="body1">Multi-line text input, resizable vertically.</p>
+
+    <!-- Default -->
+    <div class="demo-section">
+      <h2>Default</h2>
+      <div class="demo-row">
+        <div class="form-field" style="width: 480px; max-width: 100%;">
+          <label class="form-label" for="textarea-default">Description</label>
+          <textarea class="form-textarea" id="textarea-default" placeholder="Enter a description..."></textarea>
+          <span class="form-helper">Helper text</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <div class="form-field" style="width: 360px; max-width: 100%;">
+          <label class="form-label" for="textarea-error">Error state</label>
+          <textarea class="form-textarea error" id="textarea-error" aria-describedby="textarea-error-msg" aria-invalid="true">This content has an issue</textarea>
+          <span class="form-helper error" id="textarea-error-msg">Please correct this field</span>
+        </div>
+        <div class="form-field" style="width: 360px; max-width: 100%;">
+          <label class="form-label" for="textarea-disabled">Disabled</label>
+          <textarea class="form-textarea" id="textarea-disabled" disabled>This textarea is disabled and cannot be edited.</textarea>
+          <span class="form-helper">This field is disabled</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- With character counter -->
+    <div class="demo-section">
+      <h2>With Character Counter</h2>
+      <div class="demo-row">
+        <div class="form-field" style="width: 480px; max-width: 100%;">
+          <label class="form-label" for="textarea-count">Message</label>
+          <textarea class="form-textarea" id="textarea-count" placeholder="Type your message..." maxlength="200"></textarea>
+          <div class="textarea-footer">
+            <span class="char-count" id="char-counter">0 / 200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="form-textarea.js"></script>
+</body>
+</html>

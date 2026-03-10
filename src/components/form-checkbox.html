@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Checkbox - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-checkbox.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Checkbox</h1>
+    <p class="body1">Checkbox component with unchecked, checked, and indeterminate states.</p>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <!-- Unchecked -->
+        <label class="checkbox-field">
+          <input type="checkbox" id="cb-unchecked">
+          <span class="checkbox-box" aria-hidden="true">
+            <span class="checkbox-icon-blank"></span>
+            <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">Unchecked</span>
+        </label>
+
+        <!-- Checked -->
+        <label class="checkbox-field">
+          <input type="checkbox" id="cb-checked" checked>
+          <span class="checkbox-box" aria-hidden="true">
+            <span class="checkbox-icon-blank"></span>
+            <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">Checked</span>
+        </label>
+
+        <!-- Indeterminate -->
+        <label class="checkbox-field">
+          <input type="checkbox" id="cb-indeterminate">
+          <span class="checkbox-box" aria-hidden="true">
+            <span class="checkbox-icon-blank"></span>
+            <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">Indeterminate</span>
+        </label>
+
+        <!-- Disabled -->
+        <label class="checkbox-field">
+          <input type="checkbox" id="cb-disabled" disabled>
+          <span class="checkbox-box" aria-hidden="true">
+            <span class="checkbox-icon-blank"></span>
+            <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 13H5v-2h14v2z"/>
+            </svg>
+          </span>
+          <span class="checkbox-label">Disabled</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Select all example -->
+    <div class="demo-section">
+      <h2>Select All Pattern</h2>
+      <div class="demo-row">
+        <div>
+          <label class="checkbox-field" style="margin-bottom: 8px;">
+            <input type="checkbox" id="cb-select-all">
+            <span class="checkbox-box" aria-hidden="true">
+              <span class="checkbox-icon-blank"></span>
+              <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+              <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 13H5v-2h14v2z"/>
+              </svg>
+            </span>
+            <span class="checkbox-label" style="font-weight:700;">Select all</span>
+          </label>
+          <div style="padding-left: 28px; display: flex; flex-direction: column; gap: 8px;">
+            <label class="checkbox-field">
+              <input type="checkbox" class="child-cb" checked>
+              <span class="checkbox-box" aria-hidden="true">
+                <span class="checkbox-icon-blank"></span>
+                <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13H5v-2h14v2z"/>
+                </svg>
+              </span>
+              <span class="checkbox-label">Option A</span>
+            </label>
+            <label class="checkbox-field">
+              <input type="checkbox" class="child-cb" checked>
+              <span class="checkbox-box" aria-hidden="true">
+                <span class="checkbox-icon-blank"></span>
+                <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13H5v-2h14v2z"/>
+                </svg>
+              </span>
+              <span class="checkbox-label">Option B</span>
+            </label>
+            <label class="checkbox-field">
+              <input type="checkbox" class="child-cb">
+              <span class="checkbox-box" aria-hidden="true">
+                <span class="checkbox-icon-blank"></span>
+                <svg class="checkbox-icon-check" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <svg class="checkbox-icon-indeterminate" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 13H5v-2h14v2z"/>
+                </svg>
+              </span>
+              <span class="checkbox-label">Option C</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="form-checkbox.js"></script>
+</body>
+</html>
