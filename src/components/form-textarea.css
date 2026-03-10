@@ -1,0 +1,64 @@
+/* ============================================
+   Form Textarea Component
+   MonoSchemes Design System
+   ============================================ */
+
+@import url('./forms.css');
+
+.form-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: var(--spacing-xs, 8px);
+  border: 1px solid #000;
+  background: #FFFFFF;
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  color: var(--color-text-primary, #2B2F36);
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: box-shadow 0.15s;
+  line-height: 1.5;
+}
+
+.form-textarea::placeholder {
+  color: var(--color-text-secondary, #40444A);
+  opacity: 0.6;
+}
+
+.form-textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.form-textarea:disabled {
+  background: var(--color-bg-surface, #F6F7F9);
+  color: var(--color-text-secondary, #40444A);
+  cursor: not-allowed;
+  opacity: 0.6;
+  resize: none;
+}
+
+.form-textarea.error {
+  border-color: #C00000;
+}
+
+.form-textarea.error:focus {
+  box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.15);
+}
+
+/* Character counter */
+.textarea-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.char-count {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  color: var(--color-text-secondary, #40444A);
+}
+
+.char-count.over-limit {
+  color: #C00000;
+}

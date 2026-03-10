@@ -1,0 +1,118 @@
+/* ============================================
+   Form Checkbox Component
+   MonoSchemes Design System
+   ============================================ */
+
+@import url('./forms.css');
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs, 8px);
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+
+.checkbox-field input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.checkbox-field:hover .checkbox-box {
+  background: var(--color-bg-hover, #E2E5E9);
+}
+
+.checkbox-field input:focus-visible ~ .checkbox-box {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+.checkbox-field input:checked ~ .checkbox-box {
+  background: #000;
+}
+
+.checkbox-field input:checked ~ .checkbox-box .checkbox-icon-check {
+  display: block;
+}
+
+.checkbox-field input:checked ~ .checkbox-box .checkbox-icon-blank,
+.checkbox-field input:checked ~ .checkbox-box .checkbox-icon-indeterminate {
+  display: none;
+}
+
+.checkbox-field input:indeterminate ~ .checkbox-box {
+  background: #000;
+}
+
+.checkbox-field input:indeterminate ~ .checkbox-box .checkbox-icon-indeterminate {
+  display: block;
+}
+
+.checkbox-field input:indeterminate ~ .checkbox-box .checkbox-icon-blank,
+.checkbox-field input:indeterminate ~ .checkbox-box .checkbox-icon-check {
+  display: none;
+}
+
+.checkbox-field input:disabled ~ .checkbox-box {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.checkbox-field input:disabled ~ .checkbox-label {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.checkbox-field input:disabled {
+  cursor: not-allowed;
+}
+
+.checkbox-field:has(input:disabled) {
+  cursor: not-allowed;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 16px;
+  color: #FFFFFF;
+}
+
+.checkbox-icon-blank {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-icon-check {
+  display: none;
+  width: 16px;
+  height: 16px;
+  color: #FFFFFF;
+}
+
+.checkbox-icon-indeterminate {
+  display: none;
+  width: 16px;
+  height: 16px;
+  color: #FFFFFF;
+}
+
+.checkbox-label {
+  font-family: var(--font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  color: var(--color-text-primary, #2B2F36);
+}

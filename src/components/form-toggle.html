@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Toggle - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-toggle.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / Toggle</h1>
+    <p class="body1">Toggle switch component for on/off states.</p>
+
+    <!-- States -->
+    <div class="demo-section">
+      <h2>States</h2>
+      <div class="demo-row">
+        <label class="toggle-field">
+          <input type="checkbox" id="toggle-off" role="switch" aria-checked="false">
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">Off</span>
+        </label>
+
+        <label class="toggle-field">
+          <input type="checkbox" id="toggle-on" role="switch" aria-checked="true" checked>
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">On</span>
+        </label>
+
+        <label class="toggle-field">
+          <input type="checkbox" id="toggle-disabled" role="switch" disabled>
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">Disabled</span>
+        </label>
+
+        <label class="toggle-field">
+          <input type="checkbox" id="toggle-disabled-on" role="switch" disabled checked>
+          <span class="toggle-track" aria-hidden="true">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-label">Disabled On</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Settings example -->
+    <div class="demo-section">
+      <h2>Settings Example</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span class="toggle-label" style="font-size: 14px;">Notifications</span>
+          <label class="toggle-field" style="margin: 0;">
+            <input type="checkbox" role="switch" checked>
+            <span class="toggle-track" aria-hidden="true">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span class="toggle-label" style="font-size: 14px;">Dark mode</span>
+          <label class="toggle-field" style="margin: 0;">
+            <input type="checkbox" role="switch">
+            <span class="toggle-track" aria-hidden="true">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <span class="toggle-label" style="font-size: 14px;">Auto-save</span>
+          <label class="toggle-field" style="margin: 0;">
+            <input type="checkbox" role="switch" checked>
+            <span class="toggle-track" aria-hidden="true">
+              <span class="toggle-thumb"></span>
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

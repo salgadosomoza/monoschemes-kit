@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form File Upload - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="form-file.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Form / File Upload</h1>
+    <p class="body1">File upload component with button and drag &amp; drop variants.</p>
+
+    <!-- Button variant -->
+    <div class="demo-section">
+      <h2>Button</h2>
+      <div class="demo-row">
+        <div class="form-field" style="width: auto;">
+          <span class="form-label">Attachment</span>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <label>
+              <input type="file" class="file-input-native" id="file-button-input" multiple accept=".pdf,.doc,.docx,.txt">
+              <span class="file-button" tabindex="0" role="button" aria-label="Choose files">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+                </svg>
+                Choose files
+              </span>
+            </label>
+            <span class="form-helper" id="file-button-status">No file chosen</span>
+          </div>
+          <span class="form-helper">PDF, DOC, TXT up to 10MB</span>
+        </div>
+      </div>
+      <!-- File list for button variant -->
+      <div class="file-list" id="file-button-list" style="max-width: 480px;"></div>
+    </div>
+
+    <!-- Drag & Drop variant -->
+    <div class="demo-section">
+      <h2>Drag &amp; Drop</h2>
+      <div class="demo-row">
+        <div class="form-field" style="width: 480px; max-width: 100%;">
+          <label class="form-label" for="file-drop-input">Upload files</label>
+          <div class="drop-zone" id="drop-zone" role="button" tabindex="0" aria-label="Drop files here or click to browse">
+            <input type="file" class="file-input-native" id="file-drop-input" multiple>
+            <svg class="drop-zone-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
+            </svg>
+            <span class="drop-zone-text">Drop files here or <strong>browse</strong></span>
+            <span class="drop-zone-subtext">PNG, JPG, PDF, DOC up to 10MB</span>
+          </div>
+          <!-- File list for drop zone -->
+          <div class="file-list" id="file-drop-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="form-file.js"></script>
+</body>
+</html>
