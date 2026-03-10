@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table - MonoSchemes</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="table.css">
+</head>
+<body>
+  <nav class="component-nav">
+    <a href="../../index.html">← Back to Home</a>
+  </nav>
+
+  <div class="demo-container">
+    <h1>Table</h1>
+    <p class="body1">Data table with sorting, row selection, search, and pagination.</p>
+
+    <div class="table-wrapper">
+      <div class="table-card">
+
+        <!-- Table card header (Figma: layout_VARXQD) -->
+        <div class="table-card-header">
+          <div class="table-card-header-info">
+            <h2 class="table-card-title">Product Catalog</h2>
+            <p class="table-card-description">Manage and review all products in your inventory.</p>
+          </div>
+          <div class="table-card-actions">
+            <button class="btn btn-secondary" type="button" id="btn-export">Export</button>
+            <button class="btn btn-primary" type="button" id="btn-add">+ Add product</button>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="table-toolbar">
+          <div class="table-search-wrapper">
+            <svg class="table-search-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input class="table-search" id="table-search" type="search" placeholder="Search products..." aria-label="Search products">
+          </div>
+          <span class="selection-info" id="selection-info" aria-live="polite"></span>
+        </div>
+
+        <!-- Table (Figma: tbody = layout_0UQVC8, th/td padding 16px) -->
+        <table class="data-table" role="grid" aria-label="Product catalog">
+          <colgroup>
+            <col class="col-check">
+            <col class="col-id">
+            <col class="col-name">
+            <col class="col-cat">
+            <col class="col-price">
+            <col class="col-stock">
+            <col class="col-status">
+            <col class="col-date">
+            <col class="col-action">
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="col-check" scope="col">
+                <input type="checkbox" class="row-checkbox" id="select-all" aria-label="Select all rows">
+              </th>
+              <th scope="col" class="th-sortable" data-col="id" aria-sort="none">
+                <div class="th-inner">
+                  ID
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="name" aria-sort="none">
+                <div class="th-inner">
+                  Name
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="category" aria-sort="none">
+                <div class="th-inner">
+                  Category
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="price" aria-sort="none">
+                <div class="th-inner">
+                  Price
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="stock" aria-sort="none">
+                <div class="th-inner">
+                  Stock
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="status" aria-sort="none">
+                <div class="th-inner">
+                  Status
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col" class="th-sortable" data-col="date" aria-sort="none">
+                <div class="th-inner">
+                  Date added
+                  <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z"/>
+                  </svg>
+                </div>
+              </th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+
+        <!-- Empty state (hidden by default) -->
+        <div class="table-empty" id="table-empty" hidden>
+          No results found for your search.
+        </div>
+
+        <!-- Pagination (Figma: layout_7A3EG5, gap 40px) -->
+        <div class="table-pagination">
+          <div class="per-page-selector">
+            <label for="per-page">Rows per page:</label>
+            <select class="per-page-select" id="per-page" aria-label="Rows per page">
+              <option value="5">5</option>
+              <option value="10" selected>10</option>
+              <option value="20">20</option>
+            </select>
+          </div>
+
+          <div class="pagination-controls">
+            <span class="pagination-info" id="pagination-info" aria-live="polite"></span>
+            <div class="pagination-pages" role="navigation" aria-label="Pagination">
+              <button class="page-btn page-btn-icon" id="btn-prev" type="button" aria-label="Previous page">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+                Prev
+              </button>
+              <div id="page-numbers" class="pagination-pages" role="group" aria-label="Page numbers"></div>
+              <button class="page-btn page-btn-icon" id="btn-next" type="button" aria-label="Next page">
+                Next
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.table-card -->
+    </div><!-- /.table-wrapper -->
+  </div><!-- /.demo-container -->
+
+  <script src="table.js"></script>
+</body>
+</html>
