@@ -3,38 +3,45 @@
  */
 
 :root {
-  /* Colors: Text */
-  --color-text-primary: #2B2F36;
-  --color-text-secondary: #40444A;
+  /* Primitive colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-25: #F6F7F9;
+  --color-gray-50: #F2F2F2;
+  --color-gray-100: #E2E5E9;
+  --color-gray-200: #D9D9D9;
+  --color-gray-300: #CFCFCF;
+  --color-gray-400: #737373;
+  --color-gray-500: #666666;
+  --color-gray-600: #5A6D7E;
+  --color-gray-700: #40444A;
+  --color-gray-800: #2B2F36;
+  --color-gray-900: #1E1F22;
+  --color-rust-500: #B15C4A;
+  --color-green-400: #8DA59D;
+  --color-yellow-400: #D1B475;
+  --color-blue-400: #7A9EB1;
 
-  /* Colors: Background */
-  --color-bg-page: #FFFFFF;
-  --color-bg-surface: #F6F7F9;
-  --color-bg-hover: #E2E5E9;
-  --color-bg-dark: #1E1F22;
+  /* Semantic colors — text */
+  --color-text-primary: var(--color-gray-800);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-placeholder: var(--color-gray-400);
+  --color-text-disabled: var(--color-gray-400);
+  --color-text-inverse: var(--color-white);
+  --color-text-error: var(--color-rust-500);
 
-  /* Colors: Border */
-  --color-border-default: #40444A;
-  --color-border-light: #E2E5E9;
+  /* Semantic colors — border */
+  --color-border-default: var(--color-gray-700);
+  --color-border-focused: var(--color-black);
+  --color-border-error: var(--color-rust-500);
+  --color-border-disabled: var(--color-gray-100);
 
-  /* Colors: Palette */
-  --color-palette-storm-slate: #2B2F36;
-  --color-palette-asphalt: #40444A;
-  --color-palette-cloud-gray: #E2E5E9;
-  --color-palette-mist-white: #F6F7F9;
-  --color-palette-shadow-depth: #1E1F22;
-  --color-palette-window-light: #CFCFCF;
-  --color-palette-frosted-glass: #D9D9D9;
-  --color-palette-fog-glow: #F2F2F2;
-  --color-palette-graphite: #666666;
-  --color-palette-ash-fade: #737373;
-  --color-palette-rain-blue: #5A6D7E;
-  --color-palette-dusty-lake: #7A9EB1;
-  --color-palette-fog-green: #8DA59D;
-  --color-palette-rust-highlight: #B15C4A;
-  --color-palette-golden-smoke: #D1B475;
-  --color-palette-darkness: #000000;
-  --color-palette-whiteness: #FFFFFF;
+  /* Semantic colors — background */
+  --color-bg-page: var(--color-white);
+  --color-bg-surface: var(--color-gray-25);
+  --color-bg-hover: var(--color-gray-100);
+  --color-bg-disabled: var(--color-gray-25);
+  --color-bg-inverse: var(--color-black);
 
   /* Typography */
   --font-family: 'Inter', -apple-system, sans-serif;
