@@ -1,0 +1,33 @@
+{
+  "components": {
+    "Avatar": {
+      "figmaNode": "2:35",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["icon", "initials", "image"],
+          "default": "icon"
+        },
+        "variant": {
+          "type": "variant",
+          "values": ["round", "rounded", "square"],
+          "default": "round"
+        }
+      }
+    },
+    "Chip": {
+      "figmaNode": "10:468",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default", "drag"],
+          "default": "default"
+        },
+        "label": {
+          "type": "text",
+          "default": "Chip name"
+        }
+      }
+    }
+  }
+}
