@@ -28,6 +28,134 @@
           "default": "Chip name"
         }
       }
+    },
+    "Button": {
+      "figmaNode": "3:76",
+      "props": {
+        "variant": {
+          "type": "variant",
+          "values": ["primary", "secondary"],
+          "default": "primary"
+        },
+        "disabled": {
+          "type": "variant",
+          "values": ["true", "false"],
+          "default": "false"
+        },
+        "label": {
+          "type": "text",
+          "default": "Button"
+        }
+      }
+    },
+    "Button/Group": {
+      "figmaNode": "37:141",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["text", "icon"],
+          "default": "text"
+        },
+        "position": {
+          "type": "variant",
+          "values": ["first", "middle", "last"],
+          "default": "first"
+        },
+        "variant": {
+          "type": "variant",
+          "values": ["default", "active"],
+          "default": "default"
+        },
+        "Text": {
+          "type": "text",
+          "default": "Button"
+        },
+        "Icon": {
+          "type": "instance-swap",
+          "default": "75:326"
+        }
+      }
+    },
+    "Button/Text": {
+      "figmaNode": "76:808",
+      "props": {
+        "state": {
+          "type": "variant",
+          "values": ["default", "disabled"],
+          "default": "default"
+        }
+      }
+    },
+    "Button/Icon": {
+      "figmaNode": "22:519",
+      "props": {
+        "variant": {
+          "type": "variant",
+          "values": ["primary", "secondary"],
+          "default": "primary"
+        },
+        "state": {
+          "type": "variant",
+          "values": ["enabled", "hover", "disabled"],
+          "default": "enabled"
+        },
+        "icon": {
+          "type": "instance-swap",
+          "default": "75:326"
+        }
+      }
+    },
+    "Button/Dropdown": {
+      "figmaNode": "251:1384",
+      "props": {
+        "variant": {
+          "type": "variant",
+          "values": ["primary", "secondary"],
+          "default": "primary"
+        },
+        "state": {
+          "type": "variant",
+          "values": ["default", "active"],
+          "default": "default"
+        },
+        "disabled": {
+          "type": "variant",
+          "values": ["true", "false"],
+          "default": "false"
+        },
+        "label": {
+          "type": "text",
+          "default": "Button"
+        }
+      }
+    },
+    "Button/WithIcon": {
+      "figmaNode": "434:2495",
+      "props": {
+        "variant": {
+          "type": "variant",
+          "values": ["primary", "secondary"],
+          "default": "primary"
+        },
+        "iconPosition": {
+          "type": "variant",
+          "values": ["left", "right"],
+          "default": "left"
+        },
+        "disabled": {
+          "type": "variant",
+          "values": ["true", "false"],
+          "default": "false"
+        },
+        "label": {
+          "type": "text",
+          "default": "Button"
+        },
+        "swap Icon": {
+          "type": "instance-swap",
+          "default": "75:557"
+        }
+      }
     }
   }
 }
