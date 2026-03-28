@@ -6,10 +6,9 @@
 
 /* --- Navigation --- */
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid #000;
   background: #FFFFFF;
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -155,6 +154,6 @@
 }
 
 .btn-lg {
-  padding: 16px 24px;
+  padding: var(--spacing-md) var(--spacing-lg);
   font-size: 14px;
 }

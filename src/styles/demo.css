@@ -1,0 +1,6 @@
+/* MonoSchemes — Demo wrapper utility */
+
+.demo-section {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}

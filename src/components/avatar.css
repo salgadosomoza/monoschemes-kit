@@ -1,8 +1,7 @@
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid var(--border-default, #40444A);
   background: var(--background-page, #FFFFFF);
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -65,14 +64,14 @@
 /* ─── Demo layout ─────────────────────────────────── */
 
 .demo-container {
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   max-width: 700px;
 }
 
 .demo-table {
   border-collapse: separate;
-  border-spacing: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  border-spacing: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
 }
 
 .demo-table th,

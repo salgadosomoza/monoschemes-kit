@@ -1,8 +1,7 @@
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid var(--border-default, #40444A);
   background: var(--background-page, #FFFFFF);
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -22,7 +21,7 @@
 .demo-container {
   max-width: 592px;
   margin: 0 auto;
-  padding: var(--spacing-lg) var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .accordion-group {
@@ -41,7 +40,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   gap: var(--spacing-xs);
   cursor: pointer;
 }
@@ -58,7 +57,7 @@
 }
 
 .accordion-panel {
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-md);
   margin-right: 32px;
   max-height: 0;
   opacity: 0;
@@ -69,7 +68,7 @@
 .accordion[data-state="expanded"] .accordion-panel {
   max-height: 500px;
   opacity: 1;
-  padding-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
 }
 
 .accordion[data-state="expanded"] .accordion-icon {
