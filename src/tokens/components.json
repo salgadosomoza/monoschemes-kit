@@ -1,5 +1,15 @@
 {
   "components": {
+    "Accordion": {
+      "figmaNode": "86:368",
+      "props": {
+        "state": {
+          "type": "variant",
+          "values": ["collapsed", "expanded"],
+          "default": "collapsed"
+        }
+      }
+    },
     "Avatar": {
       "figmaNode": "2:35",
       "props": {
@@ -15,20 +25,6 @@
         }
       }
     },
-    "Chip": {
-      "figmaNode": "10:468",
-      "props": {
-        "type": {
-          "type": "variant",
-          "values": ["default", "drag"],
-          "default": "default"
-        },
-        "label": {
-          "type": "text",
-          "default": "Chip name"
-        }
-      }
-    },
     "Button": {
       "figmaNode": "3:76",
       "props": {
@@ -41,67 +37,6 @@
           "type": "variant",
           "values": ["true", "false"],
           "default": "false"
-        },
-        "label": {
-          "type": "text",
-          "default": "Button"
-        }
-      }
-    },
-    "Button/Group": {
-      "figmaNode": "37:141",
-      "props": {
-        "type": {
-          "type": "variant",
-          "values": ["text", "icon"],
-          "default": "text"
-        },
-        "position": {
-          "type": "variant",
-          "values": ["first", "middle", "last"],
-          "default": "first"
-        },
-        "variant": {
-          "type": "variant",
-          "values": ["default", "active"],
-          "default": "default"
-        },
-        "Text": {
-          "type": "text",
-          "default": "Button"
-        },
-        "Icon": {
-          "type": "instance-swap",
-          "default": "75:326"
-        }
-      }
-    },
-    "Button/Text": {
-      "figmaNode": "76:808",
-      "props": {
-        "state": {
-          "type": "variant",
-          "values": ["default", "disabled"],
-          "default": "default"
-        }
-      }
-    },
-    "Button/Icon": {
-      "figmaNode": "22:519",
-      "props": {
-        "variant": {
-          "type": "variant",
-          "values": ["primary", "secondary"],
-          "default": "primary"
-        },
-        "state": {
-          "type": "variant",
-          "values": ["enabled", "hover", "disabled"],
-          "default": "enabled"
-        },
-        "icon": {
-          "type": "instance-swap",
-          "default": "75:326"
         }
       }
     },
@@ -122,10 +57,51 @@
           "type": "variant",
           "values": ["true", "false"],
           "default": "false"
+        }
+      }
+    },
+    "Button/Group": {
+      "figmaNode": "37:141",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["text", "icon"],
+          "default": "text"
         },
-        "label": {
-          "type": "text",
-          "default": "Button"
+        "position": {
+          "type": "variant",
+          "values": ["first", "middle", "last"],
+          "default": "first"
+        },
+        "variant": {
+          "type": "variant",
+          "values": ["default", "active"],
+          "default": "default"
+        }
+      }
+    },
+    "Button/Icon": {
+      "figmaNode": "22:519",
+      "props": {
+        "variant": {
+          "type": "variant",
+          "values": ["primary", "secondary"],
+          "default": "primary"
+        },
+        "state": {
+          "type": "variant",
+          "values": ["enabled", "hover", "disabled"],
+          "default": "enabled"
+        }
+      }
+    },
+    "Button/Text": {
+      "figmaNode": "76:808",
+      "props": {
+        "state": {
+          "type": "variant",
+          "values": ["default", "disabled"],
+          "default": "default"
         }
       }
     },
@@ -146,14 +122,206 @@
           "type": "variant",
           "values": ["true", "false"],
           "default": "false"
+        }
+      }
+    },
+    "Chip": {
+      "figmaNode": "10:468",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default", "drag"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Checkbox": {
+      "figmaNode": "24:126",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["label", "icon"],
+          "default": "label"
         },
-        "label": {
-          "type": "text",
-          "default": "Button"
+        "status": {
+          "type": "variant",
+          "values": ["inactive", "active", "indeterminated", "disabled"],
+          "default": "inactive"
+        }
+      }
+    },
+    "Form/Date": {
+      "figmaNode": "22:560",
+      "props": {
+        "status": {
+          "type": "variant",
+          "values": ["default", "disabled"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/FileUpload": {
+      "figmaNode": "100:493",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default", "drag-and-drop"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Input": {
+      "figmaNode": "444:3191",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["simple", "trailing-icon", "leading-select", "prefix", "leading-and-trailing-icon"],
+          "default": "simple"
         },
-        "swap Icon": {
-          "type": "instance-swap",
-          "default": "75:557"
+        "state": {
+          "type": "variant",
+          "values": ["default", "focused", "disabled", "error"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Radio": {
+      "figmaNode": "75:119",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["label", "icon"],
+          "default": "label"
+        },
+        "status": {
+          "type": "variant",
+          "values": ["inactive", "active", "disabled"],
+          "default": "inactive"
+        }
+      }
+    },
+    "Form/Search": {
+      "figmaNode": "20:518",
+      "props": {
+        "status": {
+          "type": "variant",
+          "values": ["default", "focused", "disabled"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Select": {
+      "figmaNode": "2:15",
+      "props": {
+        "status": {
+          "type": "variant",
+          "values": ["default", "open", "disabled", "error"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Textarea": {
+      "figmaNode": "76:801",
+      "props": {
+        "status": {
+          "type": "variant",
+          "values": ["default", "focused", "disabled", "error"],
+          "default": "default"
+        }
+      }
+    },
+    "Form/Toggle": {
+      "figmaNode": "444:3173",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["label", "icon"],
+          "default": "label"
+        },
+        "status": {
+          "type": "variant",
+          "values": ["inactive", "active", "disabled"],
+          "default": "inactive"
+        }
+      }
+    },
+    "Grid": {
+      "figmaNode": "106:1130",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["small", "medium", "large", "max", "full"],
+          "default": "large"
+        },
+        "columns": {
+          "type": "variant",
+          "values": ["1", "2", "4", "8", "16"],
+          "default": "16"
+        }
+      }
+    },
+    "Image": {
+      "figmaNode": "86:217",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["1:1", "16:9", "9:16", "5:4", "4:5", "4:3", "3:4", "3:2", "2:3"],
+          "default": "16:9"
+        }
+      }
+    },
+    "Link": {
+      "figmaNode": "86:502",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default", "icon"],
+          "default": "default"
+        },
+        "size": {
+          "type": "variant",
+          "values": ["small", "medium", "large"],
+          "default": "medium"
+        }
+      }
+    },
+    "Logo": {
+      "figmaNode": "727:2495",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["text", "image"],
+          "default": "text"
+        }
+      }
+    },
+    "Nav/Item": {
+      "figmaNode": "673:2102",
+      "props": {
+        "status": {
+          "type": "variant",
+          "values": ["default", "hover", "active"],
+          "default": "default"
+        }
+      }
+    },
+    "Tag": {
+      "figmaNode": "285:4420",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default"],
+          "default": "default"
+        }
+      }
+    },
+    "Text": {
+      "figmaNode": "130:1708",
+      "props": {
+        "style": {
+          "type": "variant",
+          "values": ["h1", "h2", "h3", "h4", "h5", "h6", "subtitle-1", "subtitle-2", "body-1", "body-2", "caption", "overline"],
+          "default": "body-1"
         }
       }
     }
