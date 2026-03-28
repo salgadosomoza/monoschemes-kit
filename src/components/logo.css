@@ -1,8 +1,7 @@
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid var(--border-default, #40444A);
   background: var(--background-page, #FFFFFF);
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -51,15 +50,15 @@
 /* ─── Demo layout ─────────────────────────────────── */
 
 .demo-container {
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   max-width: 600px;
 }
 
 .demo-row {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  gap: var(--gap-lg);
+  margin-top: var(--spacing-lg);
 }
 
 .demo-label {

@@ -6,10 +6,9 @@
 
 /* --- Navigation --- */
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid #000;
   background: #FFFFFF;
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -62,7 +61,7 @@
 .demo-col {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--gap-md);
 }
 
 .demo-label {

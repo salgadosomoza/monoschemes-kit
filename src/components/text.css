@@ -1,8 +1,7 @@
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid var(--border-default, #40444A);
   background: var(--background-page, #FFFFFF);
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -157,14 +156,14 @@
 /* ─── Demo layout ─────────────────────────────────── */
 
 .demo-container {
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   max-width: 900px;
 }
 
 .demo-header {
   margin-bottom: var(--spacing-lg);
   border-bottom: 1px solid var(--color-border-default);
-  padding-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-lg);
 }
 
 .demo-subtitle {
@@ -183,7 +182,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
-  margin: 0 0 var(--spacing-md);
+  margin: 0 0 var(--spacing-lg);
   padding-bottom: var(--spacing-xs);
   border-bottom: 1px solid var(--color-bg-hover);
 }
@@ -191,8 +190,8 @@
 .demo-row {
   display: flex;
   align-items: baseline;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+  gap: var(--gap-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .demo-meta {

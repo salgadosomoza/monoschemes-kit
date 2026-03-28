@@ -1,8 +1,7 @@
 .component-nav {
-  padding: 16px;
+  /* Demo wrapper styles → see src/styles/demo.css */
   border-bottom: 1px solid var(--border-default, #40444A);
   background: var(--background-page, #FFFFFF);
-  margin-bottom: 24px;
 }
 
 .component-nav a {
@@ -39,7 +38,7 @@
   width: 100%;
   max-width: 1440px;                /* layout_C9N82K: width 1440 */
   margin: 0 auto;
-  padding: var(--spacing-sm);       /* 16px — layout_C9N82K: padding 16px */
+  padding: var(--spacing-md);       /* 16px — layout_C9N82K: padding 16px */
   box-sizing: border-box;
 
   background: #ffffff;              /* fill_3OK8GM */
@@ -51,7 +50,7 @@
 .app-header__left {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);           /* 16px between logo / title / tagline */
+  gap: var(--gap-md);           /* 16px between logo / title / tagline */
 }
 
 /* Logo override: 40×40px (layout_IOK6RS) */
@@ -91,14 +90,14 @@
 .app-header__right {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);           /* 16px between nav and menu button */
+  gap: var(--gap-md);           /* 16px between nav and menu button */
 }
 
 /* Nav — layout_DNRKXD: row, gap 24px */
 .app-header__nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);           /* 24px — layout_DNRKXD: gap 24px */
+  gap: var(--gap-lg);           /* 24px — layout_DNRKXD: gap 24px */
 }
 
 /* Nav items: inherit .nav-item from nav-item.css
@@ -162,12 +161,12 @@ body {
 .demo-page {
   max-width: 720px;
   margin: 0 auto;
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
 }
 
 .demo-info {
-  margin-bottom: var(--spacing-md);
-  padding-top: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
 }
 
 .demo-info__title {
@@ -190,7 +189,7 @@ body {
 .demo-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   font-family: var(--font-family);
   font-size: 14px;
   color: var(--color-text-primary);
@@ -211,7 +210,7 @@ body {
 .demo-breakpoints {
   background: var(--color-bg-page);
   border: 1px solid var(--color-border-default);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   border-radius: 4px;
 }
 
@@ -230,6 +229,6 @@ body {
   font-size: 14px;
   color: var(--color-text-primary);
   margin: 0;
-  padding-left: var(--spacing-sm);
+  padding-left: var(--spacing-md);
   line-height: 1.8;
 }
