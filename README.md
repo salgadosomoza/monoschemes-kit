@@ -180,6 +180,20 @@ El kit está conectado al archivo de Figma mediante [figma-developer-mcp](https:
 </a>
 ```
 
+## 🧠 Claude Code Skills
+
+This repo includes Claude Code skills for working with the design system.
+
+### Install
+```bash
+./scripts/install-skills.sh
+```
+
+### Available skills
+- `/monoschemes-audit` — audits Figma vs components.json vs React
+- `/monoschemes-audit Button` — audit a single component
+- `/monoschemes-audit --fix` — auto-fix naming issues
+
 ## 📄 Licencia
 
 MIT
