@@ -3,155 +3,403 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MonoSchemes Sync</title>
+  <title>MonoSchemes Kit</title>
   <link rel="stylesheet" href="./src/styles/tokens.css">
   <style>
-    .hero {
-      max-width: 800px;
+    /* Layout */
+    .page {
+      max-width: 880px;
       margin: 0 auto;
-      padding: 80px 16px;
-      text-align: center;
+      padding: var(--spacing-xl) var(--container-padding-sm);
     }
-    .components-grid {
+
+    /* Header */
+    .header {
+      padding: var(--spacing-2xl) 0 var(--spacing-xl);
+      border-bottom: 1px solid var(--color-border-light);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--gap-sm);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .header-logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--color-text-primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header-logo-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--color-bg-page);
+    }
+
+    .header h1 {
+      font-size: var(--font-h4-size);
+      font-weight: var(--font-h4-weight);
+      line-height: var(--font-h4-line-height);
+    }
+
+    .header-tagline {
+      font-size: var(--font-body1-size);
+      color: var(--color-text-secondary);
+      margin: var(--spacing-xs) 0 var(--spacing-lg);
+    }
+
+    .header-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--gap-sm);
+    }
+
+    .header-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--gap-xs);
+      padding: 6px var(--spacing-sm);
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-full);
+      font-size: var(--font-body2-size);
+      font-weight: 500;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      background: var(--color-bg-page);
+      transition: background 0.15s;
+    }
+
+    .header-pill:hover {
+      background: var(--color-bg-hover);
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .section-heading {
+      font-size: var(--font-caption-size);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      border-bottom: 1px solid var(--color-border-light);
+      padding-bottom: var(--spacing-xs);
+      margin: 0 0 var(--spacing-md);
+    }
+
+    /* Cards grid */
+    .cards-grid {
       display: grid;
-      gap: 24px;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap-md);
     }
+
+    @media (max-width: 560px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .component-card {
       background: var(--color-bg-surface);
-      padding: 24px;
-      border: 1px solid var(--color-border-default);
-      border-radius: 8px;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
       text-decoration: none;
       color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-xs);
+      transition: transform 0.15s, box-shadow 0.15s;
     }
+
     .component-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: var(--color-border-default);
+    }
+
+    .component-card h3 {
+      font-size: var(--font-subtitle1-size);
+      font-weight: var(--font-subtitle1-weight);
+      color: var(--color-text-primary);
+      margin: 0;
+    }
+
+    .component-card-node {
+      font-size: var(--font-caption-size);
+      color: var(--color-text-secondary);
+      font-family: monospace;
+    }
+
+    .component-card-link {
+      font-size: var(--font-body2-size);
+      color: var(--color-text-secondary);
+      margin-top: auto;
+      padding-top: var(--spacing-xs);
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--color-border-light);
+      padding: var(--spacing-xl) 0;
+      margin-top: var(--spacing-2xl);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap-md);
+    }
+
+    .footer-copy {
+      font-size: var(--font-caption-size);
+      color: var(--color-text-secondary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--gap-md);
+    }
+
+    .footer-links a {
+      font-size: var(--font-caption-size);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-text-primary);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>🔄 MonoSchemes Sync</h1>
-    <p class="body1">Component library with Figma sync</p>
-  </div>
+  <div class="page">
 
-  <div class="components-grid">
-    <a href="./src/components/icons.html" class="component-card">
-      <h3>Icons</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/app-header.html" class="component-card">
-      <h3>App Header</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/grid.html" class="component-card">
-      <h3>Grid</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/text.html" class="component-card">
-      <h3>Text</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/accordion.html" class="component-card">
-      <h3>Accordion</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/avatar.html" class="component-card">
-      <h3>Avatar</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/image.html" class="component-card">
-      <h3>Image</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/chip.html" class="component-card">
-      <h3>Chip</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/logo.html" class="component-card">
-      <h3>Logo</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/nav-item.html" class="component-card">
-      <h3>Nav/Item</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/forms.html" class="component-card">
-      <h3>Forms</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-input.html" class="component-card">
-      <h3>Form / Input</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-checkbox.html" class="component-card">
-      <h3>Form / Checkbox</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-radio.html" class="component-card">
-      <h3>Form / Radio Button</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-toggle.html" class="component-card">
-      <h3>Form / Toggle</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-select.html" class="component-card">
-      <h3>Form / Select</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-search.html" class="component-card">
-      <h3>Form / Search</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-date.html" class="component-card">
-      <h3>Form / Date</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-textarea.html" class="component-card">
-      <h3>Form / Textarea</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/form-file.html" class="component-card">
-      <h3>Form / File Upload</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/table.html" class="component-card">
-      <h3>Table</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/buttons.html" class="component-card">
-      <h3>Buttons</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/button.html" class="component-card">
-      <h3>Button</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/button-icon.html" class="component-card">
-      <h3>Button with Icon</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/button-text.html" class="component-card">
-      <h3>Button Text</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/link.html" class="component-card">
-      <h3>Link</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/tag.html" class="component-card">
-      <h3>Tag</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
-    <a href="./src/components/pagination.html" class="component-card">
-      <h3>Pagination</h3>
-      <p class="body1">✅ Ready to use</p>
-    </a>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-logo">
+        <div class="header-logo-icon">
+          <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="6" height="6" rx="1"/>
+            <rect x="10" y="2" width="6" height="6" rx="1"/>
+            <rect x="2" y="10" width="6" height="6" rx="1"/>
+            <rect x="10" y="10" width="6" height="6" rx="1"/>
+          </svg>
+        </div>
+        <h1>MonoSchemes Kit</h1>
+      </div>
+      <p class="header-tagline">Vanilla HTML/CSS reference implementation</p>
+      <nav class="header-links">
+        <a href="https://github.com/salgadosomoza/monoschemes-ui" class="header-pill" target="_blank" rel="noopener">
+          ⚛️ React Library
+        </a>
+        <a href="https://www.figma.com/design/XZ8yMM8VJihEwmyFaW6sCB/MonoSchemes-kit" class="header-pill" target="_blank" rel="noopener">
+          📐 Figma File
+        </a>
+        <a href="./SETUP.md" class="header-pill">
+          📖 Setup Guide
+        </a>
+      </nav>
+    </header>
+
+    <!-- Foundations -->
+    <section class="section">
+      <h2 class="section-heading">Foundations</h2>
+      <div class="cards-grid">
+        <a href="./src/components/text.html" class="component-card">
+          <h3>Text</h3>
+          <span class="component-card-node">node 130:1708</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/icons.html" class="component-card">
+          <h3>Icons</h3>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/grid.html" class="component-card">
+          <h3>Grid</h3>
+          <span class="component-card-node">node 106:1130</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Layout -->
+    <section class="section">
+      <h2 class="section-heading">Layout</h2>
+      <div class="cards-grid">
+        <a href="./src/components/app-header.html" class="component-card">
+          <h3>App Header</h3>
+          <span class="component-card-node">node 2:45</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/logo.html" class="component-card">
+          <h3>Logo</h3>
+          <span class="component-card-node">node 727:2495</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Components -->
+    <section class="section">
+      <h2 class="section-heading">Components</h2>
+      <div class="cards-grid">
+        <a href="./src/components/accordion.html" class="component-card">
+          <h3>Accordion</h3>
+          <span class="component-card-node">node 86:368</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/avatar.html" class="component-card">
+          <h3>Avatar</h3>
+          <span class="component-card-node">node 2:35</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/chip.html" class="component-card">
+          <h3>Chip</h3>
+          <span class="component-card-node">node 10:468</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/image.html" class="component-card">
+          <h3>Image</h3>
+          <span class="component-card-node">node 86:217</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/link.html" class="component-card">
+          <h3>Link</h3>
+          <span class="component-card-node">node 86:502</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/nav-item.html" class="component-card">
+          <h3>Nav/Item</h3>
+          <span class="component-card-node">node 673:2102</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/pagination.html" class="component-card">
+          <h3>Pagination</h3>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/tag.html" class="component-card">
+          <h3>Tag</h3>
+          <span class="component-card-node">node 285:4420</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="section">
+      <h2 class="section-heading">Buttons</h2>
+      <div class="cards-grid">
+        <a href="./src/components/button.html" class="component-card">
+          <h3>Button</h3>
+          <span class="component-card-node">node 3:76</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/button-icon.html" class="component-card">
+          <h3>Button with Icon</h3>
+          <span class="component-card-node">node 434:2495</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/button-text.html" class="component-card">
+          <h3>Button Text</h3>
+          <span class="component-card-node">node 76:808</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/buttons.html" class="component-card">
+          <h3>Buttons</h3>
+          <span class="component-card-node">node 37:141</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="section">
+      <h2 class="section-heading">Form</h2>
+      <div class="cards-grid">
+        <a href="./src/components/forms.html" class="component-card">
+          <h3>Forms</h3>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-input.html" class="component-card">
+          <h3>Form / Input</h3>
+          <span class="component-card-node">node 444:3191</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-checkbox.html" class="component-card">
+          <h3>Form / Checkbox</h3>
+          <span class="component-card-node">node 24:126</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-radio.html" class="component-card">
+          <h3>Form / Radio Button</h3>
+          <span class="component-card-node">node 75:119</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-toggle.html" class="component-card">
+          <h3>Form / Toggle</h3>
+          <span class="component-card-node">node 444:3173</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-select.html" class="component-card">
+          <h3>Form / Select</h3>
+          <span class="component-card-node">node 2:15</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-search.html" class="component-card">
+          <h3>Form / Search</h3>
+          <span class="component-card-node">node 20:518</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-date.html" class="component-card">
+          <h3>Form / Date</h3>
+          <span class="component-card-node">node 22:560</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-textarea.html" class="component-card">
+          <h3>Form / Textarea</h3>
+          <span class="component-card-node">node 76:801</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+        <a href="./src/components/form-file.html" class="component-card">
+          <h3>Form / File Upload</h3>
+          <span class="component-card-node">node 100:493</span>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Data -->
+    <section class="section">
+      <h2 class="section-heading">Data</h2>
+      <div class="cards-grid">
+        <a href="./src/components/table.html" class="component-card">
+          <h3>Table</h3>
+          <span class="component-card-link">→ View component</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span class="footer-copy">MonoSchemes Kit · MIT License</span>
+      <nav class="footer-links">
+        <a href="https://github.com/salgadosomoza/monoschemes-kit" target="_blank" rel="noopener">monoschemes-kit</a>
+        <a href="https://github.com/salgadosomoza/monoschemes-ui" target="_blank" rel="noopener">monoschemes-ui</a>
+      </nav>
+    </footer>
+
   </div>
 </body>
 </html>
