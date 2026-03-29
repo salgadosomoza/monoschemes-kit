@@ -36,13 +36,13 @@
   user-select: none;
 }
 
-/* Label — body 1: Inter 400, 16px */
+/* Label — caption: Inter 400, 12px */
 .chip-label {
   font-family: var(--font-family);
-  font-size: var(--font-body1-size);       /* 16px */
-  font-weight: var(--font-body1-weight);   /* 400 */
-  line-height: var(--font-body1-line-height);
-  color: #000000;                          /* fill_ED7X61 */
+  font-size: var(--font-caption-size);
+  font-weight: var(--font-caption-weight);
+  line-height: var(--font-caption-line-height);
+  color: #000000;
 }
 
 /* Close button — 24×24px */

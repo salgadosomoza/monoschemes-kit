@@ -29,8 +29,8 @@
 
   width: 64px;               /* layout_LGGGZD: 64×64 */
   height: 64px;
-  background: #D9D9D9;       /* fill_J6SM7D */
-  color: #000000;
+  background: var(--color-gray-200);
+  color: var(--color-black);
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -57,7 +57,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 1;
-  color: #000000;
+  color: var(--color-black);
   letter-spacing: 0.02em;
 }
 
