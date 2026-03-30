@@ -151,7 +151,7 @@
       }
     },
     "Form/Date": {
-      "figmaNode": "22:560",
+      "figmaNode": "1441:425",
       "props": {
         "status": {
           "type": "variant",
@@ -201,7 +201,7 @@
       }
     },
     "Form/Search": {
-      "figmaNode": "20:518",
+      "figmaNode": "1441:387",
       "props": {
         "status": {
           "type": "variant",
@@ -211,7 +211,7 @@
       }
     },
     "Form/Select": {
-      "figmaNode": "2:15",
+      "figmaNode": "1441:371",
       "props": {
         "status": {
           "type": "variant",
@@ -221,7 +221,7 @@
       }
     },
     "Form/Textarea": {
-      "figmaNode": "76:801",
+      "figmaNode": "1441:406",
       "props": {
         "status": {
           "type": "variant",
@@ -323,6 +323,56 @@
           "values": ["h1", "h2", "h3", "h4", "h5", "h6", "subtitle-1", "subtitle-2", "body-1", "body-2", "caption", "overline"],
           "default": "body-1"
         }
+      }
+    },
+    "Pagination": {
+      "figmaNode": "8:335",
+      "props": {
+        "currentPage": { "type": "number", "default": 1 },
+        "totalPages": { "type": "number", "default": 5 },
+        "showPrevNext": { "type": "boolean", "default": true }
+      }
+    },
+    "Table": {
+      "figmaNode": "8:401",
+      "props": {
+        "striped": { "type": "boolean", "default": false },
+        "bordered": { "type": "boolean", "default": true }
+      }
+    },
+    "Notification/Toast": {
+      "figmaNode": "10:479",
+      "props": {
+        "type": {
+          "type": "variant",
+          "values": ["default", "success", "error", "warning"],
+          "default": "default"
+        },
+        "duration": { "type": "number", "default": 3000 }
+      }
+    },
+    "Notification/Banner": {
+      "figmaNode": "475:79",
+      "props": {
+        "position": {
+          "type": "variant",
+          "values": ["top", "bottom"],
+          "default": "top"
+        }
+      }
+    },
+    "Notification/Modal": {
+      "figmaNode": "475:1894",
+      "props": {
+        "isOpen": { "type": "boolean", "default": false },
+        "closeOnOverlayClick": { "type": "boolean", "default": true }
+      }
+    },
+    "AppHeader": {
+      "figmaNode": "2:45",
+      "props": {
+        "showAvatar": { "type": "boolean", "default": false },
+        "showActions": { "type": "boolean", "default": false }
       }
     }
   }
