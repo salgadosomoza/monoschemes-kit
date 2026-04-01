@@ -33,50 +33,15 @@
           "values": ["primary", "secondary"],
           "default": "primary"
         },
-        "disabled": {
+        "iconPosition": {
           "type": "variant",
-          "values": ["true", "false"],
-          "default": "false"
-        }
-      }
-    },
-    "Button/Dropdown": {
-      "figmaNode": "251:1384",
-      "props": {
-        "variant": {
-          "type": "variant",
-          "values": ["primary", "secondary"],
-          "default": "primary"
-        },
-        "state": {
-          "type": "variant",
-          "values": ["default", "active"],
-          "default": "default"
+          "values": ["none", "left", "right"],
+          "default": "none"
         },
         "disabled": {
           "type": "variant",
           "values": ["true", "false"],
           "default": "false"
-        }
-      }
-    },
-    "Button/Group": {
-      "figmaNode": "37:141",
-      "props": {
-        "type": {
-          "type": "variant",
-          "values": ["text", "icon"],
-          "default": "text"
-        },
-        "position": {
-          "type": "variant",
-          "values": ["first", "middle", "last"],
-          "default": "first"
-        },
-        "variant": {
-          "type": "variant",
-          "values": ["default", "active"],
-          "default": "default"
         }
       }
     },
@@ -102,26 +67,6 @@
           "type": "variant",
           "values": ["default", "disabled"],
           "default": "default"
-        }
-      }
-    },
-    "Button/WithIcon": {
-      "figmaNode": "434:2495",
-      "props": {
-        "variant": {
-          "type": "variant",
-          "values": ["primary", "secondary"],
-          "default": "primary"
-        },
-        "iconPosition": {
-          "type": "variant",
-          "values": ["left", "right"],
-          "default": "left"
-        },
-        "disabled": {
-          "type": "variant",
-          "values": ["true", "false"],
-          "default": "false"
         }
       }
     },
