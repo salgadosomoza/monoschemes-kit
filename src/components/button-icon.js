@@ -1,4 +1,4 @@
-// Button with Icon - MonoSchemes
+// Button Icon - MonoSchemes
 // No extra JS needed beyond button.js behaviour.
 // This file is a placeholder for future icon-swap or loading state logic.
 

@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button - MonoSchemes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0">
   <link rel="stylesheet" href="../styles/tokens.css">
   <link rel="stylesheet" href="../styles/demo.css">
   <link rel="stylesheet" href="button.css">
@@ -87,6 +90,198 @@
       <div style="display: flex; flex-direction: column; gap: 12px; max-width: 400px;">
         <button class="btn btn-primary" type="button" style="width:100%; justify-content:center;">Primary full width</button>
         <button class="btn btn-secondary" type="button" style="width:100%; justify-content:center;">Secondary full width</button>
+      </div>
+    </div>
+
+    <!-- With icon — icon position -->
+    <div class="demo-section">
+      <h2>With icon — Position</h2>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Icon left</div>
+          <button class="btn btn-primary btn--with-icon" type="button">
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_left</span></span>
+            Button
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Icon right</div>
+          <button class="btn btn-primary btn--with-icon" type="button">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Secondary, icon left</div>
+          <button class="btn btn-secondary btn--with-icon" type="button">
+            <span class="btn__icon"><span class="material-symbols-outlined">download</span></span>
+            Download
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Secondary, icon right</div>
+          <button class="btn btn-secondary btn--with-icon" type="button">
+            Next
+            <span class="btn__icon"><span class="material-symbols-outlined">arrow_forward</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- With icon — Variants -->
+    <div class="demo-section">
+      <h2>With icon — Variants</h2>
+      <div class="demo-row">
+        <button class="btn btn-primary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">add</span></span>
+          Primary
+        </button>
+        <button class="btn btn-secondary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">add</span></span>
+          Secondary
+        </button>
+        <button class="btn btn-disabled btn--with-icon" type="button" disabled aria-disabled="true">
+          <span class="btn__icon"><span class="material-symbols-outlined">add</span></span>
+          Disabled
+        </button>
+      </div>
+    </div>
+
+    <!-- With icon — Sizes -->
+    <div class="demo-section">
+      <h2>With icon — Sizes</h2>
+      <div class="demo-row" style="align-items: flex-end;">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Small</div>
+          <button class="btn btn-primary btn-sm btn--with-icon" type="button">
+            <span class="btn__icon"><span class="material-symbols-outlined">search</span></span>
+            Search
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn btn-primary btn--with-icon" type="button">
+            <span class="btn__icon"><span class="material-symbols-outlined">search</span></span>
+            Search
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Large</div>
+          <button class="btn btn-primary btn-lg btn--with-icon" type="button">
+            <span class="btn__icon"><span class="material-symbols-outlined">search</span></span>
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- With icon — States -->
+    <div class="demo-section">
+      <h2>With icon — States</h2>
+
+      <p class="demo-label">Primary</p>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn btn-primary btn--with-icon" type="button">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
+          <button class="btn btn-primary btn--with-icon" type="button" style="background:#40444A;border-color:#40444A;">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Active (simulate)</div>
+          <button class="btn btn-primary btn--with-icon" type="button" style="background:#1a1a1a;border-color:#1a1a1a;">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Focus (simulate)</div>
+          <button class="btn btn-primary btn--with-icon" type="button" style="outline:none;box-shadow:0 0 0 3px rgba(0,0,0,0.25);">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Disabled</div>
+          <button class="btn btn-disabled btn--with-icon" type="button" disabled aria-disabled="true">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+      </div>
+
+      <p class="demo-label">Secondary</p>
+      <div class="demo-row">
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Default</div>
+          <button class="btn btn-secondary btn--with-icon" type="button">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
+          <button class="btn btn-secondary btn--with-icon" type="button" style="background:#E2E5E9;">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Active (simulate)</div>
+          <button class="btn btn-secondary btn--with-icon" type="button" style="background:#d0d3d7;">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Focus (simulate)</div>
+          <button class="btn btn-secondary btn--with-icon" type="button" style="outline:none;box-shadow:0 0 0 3px rgba(0,0,0,0.15);">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Disabled</div>
+          <button class="btn btn-disabled btn--with-icon" type="button" disabled aria-disabled="true">
+            Button
+            <span class="btn__icon"><span class="material-symbols-outlined">chevron_right</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- With icon — Common use cases -->
+    <div class="demo-section">
+      <h2>With icon — Common use cases</h2>
+      <div class="demo-row">
+        <button class="btn btn-primary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">download</span></span>
+          Download
+        </button>
+        <button class="btn btn-secondary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">search</span></span>
+          Search
+        </button>
+        <button class="btn btn-primary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">add</span></span>
+          New item
+        </button>
+        <button class="btn btn-secondary btn--with-icon" type="button">
+          Next
+          <span class="btn__icon"><span class="material-symbols-outlined">arrow_forward</span></span>
+        </button>
+        <button class="btn btn-secondary btn--with-icon" type="button">
+          <span class="btn__icon"><span class="material-symbols-outlined">arrow_back</span></span>
+          Back
+        </button>
       </div>
     </div>
   </div>
