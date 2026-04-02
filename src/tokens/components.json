@@ -65,7 +65,7 @@
       "props": {
         "state": {
           "type": "variant",
-          "values": ["default", "disabled"],
+          "values": ["default", "hover", "active", "disabled"],
           "default": "default"
         }
       }

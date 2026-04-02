@@ -1,55 +1,55 @@
 /* ============================================
-   Button Text (link style) Component
+   Button/Text Component
    MonoSchemes Design System
-   Figma: Component Set '76:808' (Button/Text)
+   Figma: XZ8yMM8VJihEwmyFaW6sCB · node 76:808
    ============================================ */
 
-@import url('./button.css');
-
-/* ============================================
-   Button Text
-   Figma: no background, no border, padding 12px vertical,
-   border-bottom 1px solid #000 on text span
-   state=default: stroke_K5PN36 → 0px 0px 1px #000
-   state=disabled: stroke_F82QS1 → 0px 0px 1px #666, dashes [4,2]
-   ============================================ */
 .btn-text {
   background: transparent;
   border: none;
-  padding: 12px 0;
-  color: #000000;
-  font-family: var(--font-family, 'Inter', sans-serif);
-  font-size: 12px;
+  padding: var(--spacing-sm) 0;
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-size: var(--font-caption-size);
   font-weight: 700;
-  line-height: 1.333;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  line-height: var(--font-caption-line-height);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--gap-sm);
   user-select: none;
   text-decoration: none;
   transition: color 0.15s;
 }
 
+/* The underline lives on a child <span> so it can be dashed for disabled */
 .btn-text-label {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid var(--color-black);
   padding-bottom: 1px;
   transition: border-color 0.15s;
 }
 
+/* ─── Hover ─────────────────────────────────── */
+
 .btn-text:hover {
-  color: var(--color-text-secondary, #40444A);
+  color: var(--color-text-secondary);
 }
 
 .btn-text:hover .btn-text-label {
-  border-color: var(--color-text-secondary, #40444A);
+  border-color: var(--color-text-secondary);
 }
 
+/* ─── Active ────────────────────────────────── */
+
 .btn-text:active {
-  color: #1a1a1a;
+  color: var(--color-gray-700);
 }
+
+.btn-text:active .btn-text-label {
+  border-color: var(--color-gray-700);
+}
+
+/* ─── Focus ─────────────────────────────────── */
 
 .btn-text:focus-visible {
   outline: none;
@@ -57,16 +57,17 @@
   border-radius: 2px;
 }
 
-/* ── Disabled ─────────────────────────────── */
-/* Figma: stroke_F82QS1 — color #666, dashes [4,2] */
+/* ─── Disabled ──────────────────────────────── */
+/* Figma: stroke dashed, color #666 */
+
 .btn-text-disabled,
 .btn-text:disabled {
-  color: #666666;
+  color: var(--color-gray-500);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .btn-text-disabled .btn-text-label,
 .btn-text:disabled .btn-text-label {
-  border-bottom: 1px dashed #666666;
+  border-bottom: 1px dashed var(--color-gray-500);
 }

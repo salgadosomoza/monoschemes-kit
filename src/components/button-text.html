@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Text - MonoSchemes</title>
+  <title>Button / Text — MonoSchemes</title>
   <link rel="stylesheet" href="../styles/tokens.css">
-  <link rel="stylesheet" href="../styles/demo.css">
   <link rel="stylesheet" href="button-text.css">
 </head>
 <body>
@@ -14,7 +13,7 @@
   </nav>
 
   <div class="demo-container">
-    <h1>Button Text</h1>
+    <h1>Button / Text</h1>
     <p class="body1">Link-style button — no background, text with border-bottom underline.</p>
 
     <!-- States -->
@@ -29,8 +28,14 @@
         </div>
         <div>
           <div class="demo-label" style="margin-bottom: 8px;">Hover (simulate)</div>
-          <button class="btn-text" type="button" style="color:#40444A;">
-            <span class="btn-text-label" style="border-color:#40444A;">Button</span>
+          <button class="btn-text" type="button" style="color: var(--color-text-secondary);">
+            <span class="btn-text-label" style="border-color: var(--color-text-secondary);">Button</span>
+          </button>
+        </div>
+        <div>
+          <div class="demo-label" style="margin-bottom: 8px;">Active (simulate)</div>
+          <button class="btn-text" type="button" style="color: var(--color-gray-800);">
+            <span class="btn-text-label" style="border-color: var(--color-gray-800);">Button</span>
           </button>
         </div>
         <div>

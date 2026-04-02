@@ -1,13 +1,13 @@
 /* ============================================
-   Button with Icon Component
+   Button Icon Component
    MonoSchemes Design System
-   Figma: Component Set '434:2495' (Button with Icon)
+   Figma: Component Set '434:2495' (Button Icon)
    ============================================ */
 
 @import url('./button.css');
 
 /* ============================================
-   Button with Icon
+   Button Icon
    Figma buttonLeft=True:  padding: 8px 8px 8px 12px  (icon on left, text on right)
    Figma buttonLeft=False: padding: 8px 12px (text on left, icon on right → 8px 12px)
    gap: 8px, icon size: 24×24
