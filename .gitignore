@@ -140,5 +140,8 @@ vite.config.ts.timestamp-*
 .mcp.json
 
 # Server
-server.js.DS_Store
+server.js
+
+# macOS / editor noise
+.DS_Store
 .claude/
