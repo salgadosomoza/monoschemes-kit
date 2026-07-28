@@ -140,4 +140,5 @@ vite.config.ts.timestamp-*
 .mcp.json
 
 # Server
-server.js
+server.js.DS_Store
+.claude/
