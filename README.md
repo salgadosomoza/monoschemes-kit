@@ -15,22 +15,30 @@ Cada componente se lee directamente desde el archivo de Figma y se traduce a có
 ### Instalación
 
 ```bash
-git clone https://github.com/tu-usuario/monoschemes-kit.git
+git clone https://github.com/salgadosomoza/monoschemes-kit.git
 cd monoschemes-kit
+npm install
 ```
-
-No requiere dependencias. Abre `index.html` directamente en el navegador.
 
 ### Uso
 
+El catálogo (`index.html`) se sirve con **Vite**:
+
 ```bash
-# Con cualquier servidor estático local
-npx serve .
-# o
-python3 -m http.server 8080
+npm run dev      # arranca en http://localhost:5173
+npm run build    # build de producción
 ```
 
-Luego abre `http://localhost:8080` en tu navegador.
+Los componentes son standalone, así que también puedes abrir cualquier `src/components/*.html` directamente en el navegador o servirlos con un estático simple (`npx serve .`, `python3 -m http.server 8080`) sin necesidad de build.
+
+### Troubleshooting
+
+**`Cannot find module @rollup/rollup-<plataforma>`** (p. ej. `@rollup/rollup-darwin-arm64`): es el [bug conocido de npm](https://github.com/npm/cli/issues/4828) con las dependencias opcionales nativas de Vite/rollup. Ocurre al reutilizar un `node_modules` instalado en otra arquitectura. Solución: reinstalar limpio.
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
 
 ## 📁 Estructura del Proyecto
 

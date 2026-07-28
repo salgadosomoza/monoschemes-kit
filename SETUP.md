@@ -16,9 +16,9 @@ git clone https://github.com/salgadosomoza/monoschemes-ui
 ## 2. Install dependencies
 
 ```bash
-# monoschemes-kit (vanilla reference)
+# monoschemes-kit (Vite dev server for the catalog)
 cd monoschemes-kit
-# No dependencies — open index.html directly in browser
+npm install
 
 # monoschemes-ui (React library)
 cd ../monoschemes-ui
@@ -28,15 +28,18 @@ npm install
 ## 3. Run locally
 
 ```bash
-# Component catalog (vanilla)
+# Component catalog (Vite)
 cd monoschemes-kit
-node server.cjs        # serves components.json on localhost:3000
-open index.html        # open in browser
+npm run dev            # opens localhost:5173
+# node server.cjs      # (opcional) sirve components.json en localhost:3000
 
 # Storybook (React)
 cd monoschemes-ui
 npm run dev            # opens localhost:6006
 ```
+
+> **Si `npm run dev` falla con `Cannot find module @rollup/rollup-<plataforma>`** (bug de npm con dependencias opcionales nativas), reinstala limpio en esa carpeta:
+> `rm -rf node_modules package-lock.json && npm install`
 
 ## 4. Configure Figma MCP
 
