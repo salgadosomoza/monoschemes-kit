@@ -29,6 +29,8 @@ npm run dev      # arranca en http://localhost:5173
 npm run build    # build de producción
 ```
 
+> El puerto por defecto es **5173**. Si está ocupado, Vite salta al siguiente libre (5174, 5175, …); usa siempre la URL que imprime la terminal al arrancar.
+
 Los componentes son standalone, así que también puedes abrir cualquier `src/components/*.html` directamente en el navegador o servirlos con un estático simple (`npx serve .`, `python3 -m http.server 8080`) sin necesidad de build.
 
 ### Troubleshooting
