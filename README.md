@@ -1,5 +1,7 @@
 # MonoSchemes Kit
 
+> **Archived.** MonoSchemes UI is the active design system repository: [github.com/salgadosomoza/monoschemes-ui](https://github.com/salgadosomoza/monoschemes-ui). This repository remains available as a read-only reference for its original HTML/CSS/JavaScript demos and design history. New components, tokens, documentation, and maintenance belong in MonoSchemes UI.
+
 ## 📖 Descripción
 
 Design system completo con componentes reutilizables. Construido con HTML, CSS y JavaScript vanilla, diseñado en Figma y sincronizable con código.
